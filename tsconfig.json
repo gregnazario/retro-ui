@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@retro-ui/themes": ["packages/themes/src/index.ts"],
+      "@retro-ui/react": ["packages/react/src/index.ts"]
+    }
+  },
+  "include": [
+    "packages/themes/src",
+    "packages/react/src",
+    "apps/playground/src",
+    "tests"
+  ]
+}

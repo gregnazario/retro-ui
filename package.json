@@ -1,0 +1,34 @@
+{
+  "name": "retro-ui",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A collection of libraries for retro looking React UIs",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @retro-ui/playground dev",
+    "build": "pnpm --filter @retro-ui/themes build && pnpm --filter @retro-ui/react build && pnpm --filter @retro-ui/playground build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.14.0",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "@vitejs/plugin-react": "^5.0.2",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4",
+    "vitest": "^3.2.4"
+  }
+}
