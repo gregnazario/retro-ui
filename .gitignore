@@ -1,0 +1,15 @@
+*.tsbuildinfo
+node_modules
+dist
+.turbo
+.cache
+.vite
+coverage
+*.log
+.DS_Store
+apps/playground/dist
+packages/*/dist
+test-results
+playwright-report
+blob-report
+.pnpm-store
