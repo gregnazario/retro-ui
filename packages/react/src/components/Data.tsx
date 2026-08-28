@@ -52,9 +52,16 @@ export function ListBox({
         <li
           key={item}
           role="option"
+          tabIndex={0}
           aria-selected={item === value}
           data-selected={item === value}
           onClick={() => onChange?.(item)}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              onChange?.(item);
+            }
+          }}
         >
           {item}
         </li>

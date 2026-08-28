@@ -132,6 +132,22 @@ pnpm dev
 
 The playground is a live kitchen sink for every style (`#windows-95`, `#gameboy-dmg`, and so on).
 
+Type checking runs per package with the right compiler for each adapter —
+`tsc` for `@retro-ui/themes` and `@retro-ui/react`, `vue-tsc` for
+`@retro-ui/vue`, and `svelte-check` for `@retro-ui/svelte` (plus `tsc` for
+both apps):
+
+```bash
+pnpm check:packages
+```
+
+The same command, the root `tsc` program, the test suites, and production
+builds all run in CI (`.github/workflows/ci.yml`). Note that
+`packages/themes` and `packages/react` must be built
+(`pnpm --filter @retro-ui/themes --filter @retro-ui/react build`) before the
+apps' type checks — `tsc` resolves them through `dist/`, while Vite uses
+source aliases.
+
 ## Demo website
 
 `apps/demo` is the shareable showcase: a gallery that renders every style live

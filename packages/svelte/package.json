@@ -15,6 +15,10 @@
     "@retro-ui/themes": "workspace:*"
   },
   "devDependencies": {
-    "svelte": "^5.0.0"
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0"
+  },
+  "scripts": {
+    "check": "svelte-check --tsconfig tsconfig.json"
   }
 }

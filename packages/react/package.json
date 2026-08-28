@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "React components for retro-ui design systems",
   "type": "module",
-  "sideEffects": ["**/*.css"],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -13,9 +15,13 @@
       "import": "./dist/index.js"
     }
   },
-  "files": ["dist", "src/css"],
+  "files": [
+    "dist",
+    "src/css"
+  ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --clean --external react --external react-dom --external @retro-ui/themes"
+    "build": "tsup src/index.ts --format esm --dts --clean --external react --external react-dom --external @retro-ui/themes",
+    "check": "tsc --noEmit -p tsconfig.json"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",

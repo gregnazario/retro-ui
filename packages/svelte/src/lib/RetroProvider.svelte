@@ -2,7 +2,7 @@
   import { setContext } from "svelte";
   import type { Snippet } from "svelte";
   import { getTheme, themeToCssVars, type RetroTheme } from "@retro-ui/themes";
-  import { RETRO_THEME_KEY } from "../context";
+  import { RETRO_THEME_KEY, type RetroThemeContext } from "../context";
 
   let {
     theme,
@@ -14,8 +14,12 @@
     children?: Snippet;
   } = $props();
 
-  const resolved: RetroTheme = typeof theme === "string" ? getTheme(theme) : theme;
-  setContext(RETRO_THEME_KEY, resolved);
+  const resolved = $derived<RetroTheme>(typeof theme === "string" ? getTheme(theme) : theme);
+  setContext<RetroThemeContext>(RETRO_THEME_KEY, {
+    get current() {
+      return resolved;
+    },
+  });
 
   const styleText = $derived(
     Object.entries(themeToCssVars(resolved))

@@ -1,8 +1,7 @@
 <script lang="ts">
   import { getContext } from "svelte";
   import type { Snippet } from "svelte";
-  import type { RetroTheme } from "@retro-ui/themes";
-  import { RETRO_THEME_KEY } from "../context";
+  import { RETRO_THEME_KEY, type RetroThemeContext } from "../context";
 
   let {
     class: className = "",
@@ -10,10 +9,13 @@
     taskbar,
   }: { class?: string; children?: Snippet; taskbar?: Snippet } = $props();
 
-  const theme = getContext<RetroTheme | undefined>(RETRO_THEME_KEY);
+  const themeCtx = getContext<RetroThemeContext | undefined>(RETRO_THEME_KEY);
 </script>
 
-<div class="retro-desktop{className ? ` ${className}` : ""}" data-pattern={theme?.desktopPattern}>
+<div
+  class={`retro-desktop${className ? ` ${className}` : ""}`}
+  data-pattern={themeCtx?.current.desktopPattern}
+>
   <div class="retro-desktop-stage">{@render children?.()}</div>
   {#if taskbar}{@render taskbar()}{/if}
 </div>

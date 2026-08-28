@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Build library packages
+        # themes and react compile to dist/, which the apps' tsc resolves
+        run: pnpm --filter @retro-ui/themes --filter @retro-ui/react build
+
+      - name: Typecheck (repo program)
+        run: pnpm typecheck
+
+      - name: Typecheck (per package: tsc, vue-tsc, svelte-check)
+        run: pnpm check:packages
+
+      - name: Test (React, Vue, and Svelte suites)
+        run: pnpm test
+
+      - name: Build apps
+        run: pnpm build && pnpm build:demo

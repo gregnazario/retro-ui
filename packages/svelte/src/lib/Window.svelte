@@ -1,8 +1,7 @@
 <script lang="ts">
   import { getContext } from "svelte";
   import type { Snippet } from "svelte";
-  import type { RetroTheme } from "@retro-ui/themes";
-  import { RETRO_THEME_KEY } from "../context";
+  import { RETRO_THEME_KEY, type RetroThemeContext } from "../context";
   import { bumpWindowStack } from "../windowStack";
   import TitleButton from "./TitleButton.svelte";
 
@@ -26,8 +25,9 @@
     children?: Snippet;
   } = $props();
 
-  const theme = getContext<RetroTheme | undefined>(RETRO_THEME_KEY);
-  const showControls = theme?.controls !== "none";
+  const themeCtx = getContext<RetroThemeContext | undefined>(RETRO_THEME_KEY);
+  const showControls = $derived(themeCtx?.current.controls !== "none");
+  const isMac = $derived(themeCtx?.current.controls === "mac");
 
   let el: HTMLElement | undefined = $state();
   let offset = $state({ x: 0, y: 0 });
@@ -84,6 +84,9 @@
   );
 </script>
 
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<!-- Dragging is a pointer-only interaction; the window itself stays a plain
+     structural section for assistive tech. -->
 <section
   bind:this={el}
   class={`retro-window${className ? ` ${className}` : ""}`}
@@ -92,6 +95,7 @@
   style={styleText}
   onpointerdown={bringToFront}
 >
+  <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
   <header
     class="retro-titlebar"
     onpointerdown={onTitlePointerDown}
@@ -99,7 +103,7 @@
     onpointerup={endDrag}
     onpointercancel={endDrag}
   >
-    {#if showControls && theme?.controls === "mac"}
+    {#if showControls && isMac}
       <div class="retro-titlebar-controls">
         <TitleButton kind="close" />
         <TitleButton kind="min" />
@@ -107,7 +111,7 @@
       </div>
     {/if}
     <div class="retro-titlebar-title">{title}</div>
-    {#if showControls && theme?.controls !== "mac"}
+    {#if showControls && !isMac}
       <div class="retro-titlebar-controls">
         <TitleButton kind="min" />
         <TitleButton kind="max" />

@@ -3,10 +3,18 @@ import type { RetroTheme } from "@retro-ui/themes";
 
 export const RETRO_THEME_KEY = "retro-ui:theme";
 
+/**
+ * Provided as a getter so consumers that read `.current` inside templates or
+ * `$derived` expressions re-evaluate when the provider's theme prop changes.
+ */
+export interface RetroThemeContext {
+  readonly current: RetroTheme;
+}
+
 export function useRetroTheme(): RetroTheme {
-  const theme = getContext<RetroTheme | undefined>(RETRO_THEME_KEY);
-  if (!theme) {
+  const ctx = getContext<RetroThemeContext | undefined>(RETRO_THEME_KEY);
+  if (!ctx) {
     throw new Error("useRetroTheme must be used within <RetroProvider>");
   }
-  return theme;
+  return ctx.current;
 }

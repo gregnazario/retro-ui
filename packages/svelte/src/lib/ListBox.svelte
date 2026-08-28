@@ -10,9 +10,16 @@
   {#each items as item (item)}
     <li
       role="option"
+      tabindex="0"
       aria-selected={item === value}
       data-selected={item === value}
       onclick={() => onChange?.(item)}
+      onkeydown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          onChange?.(item);
+        }
+      }}
     >
       {item}
     </li>

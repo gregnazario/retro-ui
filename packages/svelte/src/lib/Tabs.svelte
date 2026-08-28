@@ -7,6 +7,9 @@
   }: { tabs: Array<{ id: string; label: string; content?: Snippet }>; defaultTab?: string } =
     $props();
 
+  // svelte-ignore state_referenced_locally
+  // The initial tab is deliberately captured once, matching React's
+  // useState(defaultTab ?? first) semantics.
   let active = $state(defaultTab ?? tabs[0]?.id);
 </script>
 
