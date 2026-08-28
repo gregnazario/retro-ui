@@ -62,10 +62,10 @@ importers:
 
   apps/demo:
     dependencies:
-      '@retro-ui/react':
+      '@gregnazario/retro-ui-react':
         specifier: workspace:*
         version: link:../../packages/react
-      '@retro-ui/themes':
+      '@gregnazario/retro-ui-themes':
         specifier: workspace:*
         version: link:../../packages/themes
       react:
@@ -105,10 +105,10 @@ importers:
 
   apps/playground:
     dependencies:
-      '@retro-ui/react':
+      '@gregnazario/retro-ui-react':
         specifier: workspace:*
         version: link:../../packages/react
-      '@retro-ui/themes':
+      '@gregnazario/retro-ui-themes':
         specifier: workspace:*
         version: link:../../packages/themes
       react:
@@ -136,10 +136,10 @@ importers:
 
   packages/react:
     dependencies:
-      '@retro-ui/styles':
+      '@gregnazario/retro-ui-styles':
         specifier: workspace:*
         version: link:../styles
-      '@retro-ui/themes':
+      '@gregnazario/retro-ui-themes':
         specifier: workspace:*
         version: link:../themes
     devDependencies:
@@ -166,10 +166,10 @@ importers:
 
   packages/svelte:
     dependencies:
-      '@retro-ui/styles':
+      '@gregnazario/retro-ui-styles':
         specifier: workspace:*
         version: link:../styles
-      '@retro-ui/themes':
+      '@gregnazario/retro-ui-themes':
         specifier: workspace:*
         version: link:../themes
     devDependencies:
@@ -191,10 +191,10 @@ importers:
 
   packages/vue:
     dependencies:
-      '@retro-ui/styles':
+      '@gregnazario/retro-ui-styles':
         specifier: workspace:*
         version: link:../styles
-      '@retro-ui/themes':
+      '@gregnazario/retro-ui-themes':
         specifier: workspace:*
         version: link:../themes
     devDependencies:

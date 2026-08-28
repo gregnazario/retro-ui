@@ -1,5 +1,5 @@
 {
-  "name": "@retro-ui/playground",
+  "name": "@gregnazario/retro-ui-playground",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -10,8 +10,8 @@
     "check": "tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
-    "@retro-ui/react": "workspace:*",
-    "@retro-ui/themes": "workspace:*",
+    "@gregnazario/retro-ui-react": "workspace:*",
+    "@gregnazario/retro-ui-themes": "workspace:*",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },

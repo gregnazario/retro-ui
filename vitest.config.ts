@@ -9,10 +9,10 @@ export default defineConfig({
   resolve: {
     conditions: ["browser"],
     alias: {
-      "@retro-ui/themes": path.resolve(import.meta.dirname, "packages/themes/src/index.ts"),
-      "@retro-ui/react": path.resolve(import.meta.dirname, "packages/react/src/index.ts"),
-      "@retro-ui/vue": path.resolve(import.meta.dirname, "packages/vue/src/index.ts"),
-      "@retro-ui/svelte": path.resolve(import.meta.dirname, "packages/svelte/src/index.ts"),
+      "@gregnazario/retro-ui-themes": path.resolve(import.meta.dirname, "packages/themes/src/index.ts"),
+      "@gregnazario/retro-ui-react": path.resolve(import.meta.dirname, "packages/react/src/index.ts"),
+      "@gregnazario/retro-ui-vue": path.resolve(import.meta.dirname, "packages/vue/src/index.ts"),
+      "@gregnazario/retro-ui-svelte": path.resolve(import.meta.dirname, "packages/svelte/src/index.ts"),
     },
   },
   test: {

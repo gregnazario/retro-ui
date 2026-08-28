@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { RetroProvider, Tabs, TextInput, Button, Window } from "@retro-ui/svelte";
+  import { RetroProvider, Tabs, TextInput, Button, Window } from "@gregnazario/retro-ui-svelte";
 
   let { themeId, title = "Panel" }: { themeId: string; title?: string } = $props();
 </script>

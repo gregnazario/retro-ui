@@ -5,8 +5,8 @@ A collection of libraries for **retro looking UIs**. One shared component API �
 Every style is rendered live, side by side, in the demo website — see [Demo website](#demo-website) for how to run it locally.
 
 ```tsx
-import { RetroProvider, Window, Button } from "@retro-ui/react";
-import { getTheme } from "@retro-ui/themes";
+import { RetroProvider, Window, Button } from "@gregnazario/retro-ui-react";
+import { getTheme } from "@gregnazario/retro-ui-themes";
 
 export function App() {
   return (
@@ -24,11 +24,11 @@ export function App() {
 
 | Package | What it is |
 | --- | --- |
-| `@retro-ui/themes` | Design tokens, metadata, and CSS variable maps for every style (framework-agnostic) |
-| `@retro-ui/styles` | The shared component CSS: class-based, token-driven, engine-aware |
-| `@retro-ui/react` | React components that restyle through those tokens |
-| `@retro-ui/vue` | The same components as Vue 3 SFCs |
-| `@retro-ui/svelte` | The same components as Svelte 5 files |
+| `@gregnazario/retro-ui-themes` | Design tokens, metadata, and CSS variable maps for every style (framework-agnostic) |
+| `@gregnazario/retro-ui-styles` | The shared component CSS: class-based, token-driven, engine-aware |
+| `@gregnazario/retro-ui-react` | React components that restyle through those tokens |
+| `@gregnazario/retro-ui-vue` | The same components as Vue 3 SFCs |
+| `@gregnazario/retro-ui-svelte` | The same components as Svelte 5 files |
 
 Switching styles is a theme change, not a rewrite:
 
@@ -49,8 +49,8 @@ brings it to the front — in all three frameworks.
 
 ```vue
 <script setup>
-import { RetroProvider, Window, Button } from "@retro-ui/vue";
-import { getTheme } from "@retro-ui/themes";
+import { RetroProvider, Window, Button } from "@gregnazario/retro-ui-vue";
+import { getTheme } from "@gregnazario/retro-ui-themes";
 </script>
 
 <template>
@@ -67,8 +67,8 @@ import { getTheme } from "@retro-ui/themes";
 
 ```svelte
 <script>
-  import { RetroProvider, Window, Button } from "@retro-ui/svelte";
-  import { getTheme } from "@retro-ui/themes";
+  import { RetroProvider, Window, Button } from "@gregnazario/retro-ui-svelte";
+  import { getTheme } from "@gregnazario/retro-ui-themes";
 </script>
 
 <RetroProvider theme={getTheme("windows-95")}>
@@ -133,8 +133,8 @@ pnpm dev
 The playground is a live kitchen sink for every style (`#windows-95`, `#gameboy-dmg`, and so on).
 
 Type checking runs per package with the right compiler for each adapter —
-`tsc` for `@retro-ui/themes` and `@retro-ui/react`, `vue-tsc` for
-`@retro-ui/vue`, and `svelte-check` for `@retro-ui/svelte` (plus `tsc` for
+`tsc` for `@gregnazario/retro-ui-themes` and `@gregnazario/retro-ui-react`, `vue-tsc` for
+`@gregnazario/retro-ui-vue`, and `svelte-check` for `@gregnazario/retro-ui-svelte` (plus `tsc` for
 both apps):
 
 ```bash
@@ -144,7 +144,7 @@ pnpm check:packages
 The same command, the root `tsc` program, the test suites, and production
 builds all run in CI (`.github/workflows/ci.yml`). Note that
 `packages/themes` and `packages/react` must be built
-(`pnpm --filter @retro-ui/themes --filter @retro-ui/react build`) before the
+(`pnpm --filter @gregnazario/retro-ui-themes --filter @gregnazario/retro-ui-react build`) before the
 apps' type checks — `tsc` resolves them through `dist/`, while Vite uses
 source aliases.
 

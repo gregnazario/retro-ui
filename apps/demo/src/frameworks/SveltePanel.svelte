@@ -8,7 +8,7 @@
     Stack,
     TextInput,
     Window,
-  } from "@retro-ui/svelte";
+  } from "@gregnazario/retro-ui-svelte";
 
   let clicks = $state(0);
 </script>

@@ -6,7 +6,7 @@ kitchen sink for one style at a time; this app shows **all of them at once**.
 ```bash
 pnpm demo          # dev server on http://localhost:5174
 pnpm build:demo    # static production build in apps/demo/dist
-pnpm --filter @retro-ui/demo exec tsc --noEmit   # typecheck
+pnpm --filter @gregnazario/retro-ui-demo exec tsc --noEmit   # typecheck
 ```
 
 The production build is plain static files (hash routing, no server runtime),
@@ -15,7 +15,7 @@ so `dist/` can be deployed to any static host.
 ## Pages
 
 - `#/` — Gallery. Era-grouped sections with a search box. Every card is a
-  **live thumbnail**: the real `@retro-ui/react` components rendering a small
+  **live thumbnail**: the real `@gregnazario/retro-ui-react` components rendering a small
   window in that theme via `RetroProvider` — not a screenshot. The stage is
   `pointer-events: none` and an overlay link makes the whole card clickable.
 - `#/style/<id>` — Detail page for one style: the full interactive control
@@ -40,7 +40,7 @@ so `dist/` can be deployed to any static host.
 
 ## Notes
 
-- Everything style-related is data-driven from `@retro-ui/themes`; a new theme
+- Everything style-related is data-driven from `@gregnazario/retro-ui-themes`; a new theme
   appears in the gallery automatically, no demo changes needed.
 - Card stages compact the library chrome slightly (`.card-stage` overrides in
   `site.css`: smaller desktop padding, no window `min-width`) so uniform grid

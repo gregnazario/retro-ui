@@ -1,5 +1,5 @@
 {
-  "name": "@retro-ui/vue",
+  "name": "@gregnazario/retro-ui-vue",
   "version": "0.1.0",
   "description": "Vue 3 components for retro-ui design systems",
   "type": "module",
@@ -11,8 +11,8 @@
     "vue": "^3.5.0"
   },
   "dependencies": {
-    "@retro-ui/styles": "workspace:*",
-    "@retro-ui/themes": "workspace:*"
+    "@gregnazario/retro-ui-styles": "workspace:*",
+    "@gregnazario/retro-ui-themes": "workspace:*"
   },
   "devDependencies": {
     "vue": "^3.5.0",

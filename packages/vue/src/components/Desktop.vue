@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, inject, type ComputedRef } from "vue";
-import type { RetroTheme } from "@retro-ui/themes";
+import type { RetroTheme } from "@gregnazario/retro-ui-themes";
 import { RETRO_THEME_KEY } from "../context";
 
 const theme = inject<ComputedRef<RetroTheme>>(RETRO_THEME_KEY);

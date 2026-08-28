@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { Button, RetroProvider, Window } from "@retro-ui/react";
-import { EXPECTED_STYLE_IDS, getTheme } from "@retro-ui/themes";
+import { Button, RetroProvider, Window } from "@gregnazario/retro-ui-react";
+import { EXPECTED_STYLE_IDS, getTheme } from "@gregnazario/retro-ui-themes";
 import { KitchenSink } from "../apps/playground/src/KitchenSink";
 
 describe("themed components", () => {

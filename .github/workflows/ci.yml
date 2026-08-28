@@ -23,7 +23,7 @@ jobs:
 
       - name: Build library packages
         # themes and react compile to dist/, which the apps' tsc resolves
-        run: pnpm --filter @retro-ui/themes --filter @retro-ui/react build
+        run: pnpm --filter @gregnazario/retro-ui-themes --filter @gregnazario/retro-ui-react build
 
       - name: Typecheck (repo program)
         run: pnpm typecheck

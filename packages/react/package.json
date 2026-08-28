@@ -1,5 +1,5 @@
 {
-  "name": "@retro-ui/react",
+  "name": "@gregnazario/retro-ui-react",
   "version": "0.1.0",
   "description": "React components for retro-ui design systems",
   "type": "module",
@@ -20,7 +20,7 @@
     "src/css"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --clean --external react --external react-dom --external @retro-ui/themes",
+    "build": "tsup src/index.ts --format esm --dts --clean --external react --external react-dom --external @gregnazario/retro-ui-themes",
     "check": "tsc --noEmit -p tsconfig.json"
   },
   "peerDependencies": {
@@ -28,8 +28,8 @@
     "react-dom": "^18.0.0 || ^19.0.0"
   },
   "dependencies": {
-    "@retro-ui/styles": "workspace:*",
-    "@retro-ui/themes": "workspace:*"
+    "@gregnazario/retro-ui-styles": "workspace:*",
+    "@gregnazario/retro-ui-themes": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^19.1.12",

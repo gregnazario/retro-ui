@@ -4,10 +4,10 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@retro-ui/themes": ["packages/themes/src/index.ts"],
-      "@retro-ui/react": ["packages/react/src/index.ts"],
-      "@retro-ui/vue": ["packages/vue/src/index.ts"],
-      "@retro-ui/svelte": ["packages/svelte/src/index.ts"]
+      "@gregnazario/retro-ui-themes": ["packages/themes/src/index.ts"],
+      "@gregnazario/retro-ui-react": ["packages/react/src/index.ts"],
+      "@gregnazario/retro-ui-vue": ["packages/vue/src/index.ts"],
+      "@gregnazario/retro-ui-svelte": ["packages/svelte/src/index.ts"]
     }
   },
   "include": [

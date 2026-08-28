@@ -1,6 +1,6 @@
 import { render } from "@testing-library/svelte";
 import { describe, expect, it } from "vitest";
-import { EXPECTED_STYLE_IDS, getTheme } from "@retro-ui/themes";
+import { EXPECTED_STYLE_IDS, getTheme } from "@gregnazario/retro-ui-themes";
 import SveltePanel from "./fixtures/SveltePanel.svelte";
 
 function dispatchPointer(el: Element, type: string, x: number, y: number) {

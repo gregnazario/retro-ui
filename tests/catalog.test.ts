@@ -4,7 +4,7 @@ import {
   TOKEN_KEYS,
   getTheme,
   themes,
-} from "@retro-ui/themes";
+} from "@gregnazario/retro-ui-themes";
 
 describe("design system catalog", () => {
   it("includes every expected style exactly once", () => {

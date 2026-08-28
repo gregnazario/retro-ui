@@ -1,4 +1,4 @@
-import { themes } from "@retro-ui/themes";
+import { themes } from "@gregnazario/retro-ui-themes";
 import { Detail } from "./Detail";
 import { Frameworks } from "./Frameworks";
 import { Gallery } from "./Gallery";

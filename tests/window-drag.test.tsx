@@ -1,6 +1,6 @@
 import { act, render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { RetroProvider, Window } from "@retro-ui/react";
+import { RetroProvider, Window } from "@gregnazario/retro-ui-react";
 
 function dispatchPointer(el: Element, type: string, x: number, y: number) {
   el.dispatchEvent(

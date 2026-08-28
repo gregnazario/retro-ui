@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { getTheme, themes, type RetroTheme } from "@retro-ui/themes";
+import { getTheme, themes, type RetroTheme } from "@gregnazario/retro-ui-themes";
 import { ThemeDemo } from "./ThemeDemo";
 
 const isColor = (value: string) =>
@@ -8,16 +8,16 @@ const isColor = (value: string) =>
 type Framework = "react" | "vue" | "svelte";
 
 const FRAMEWORKS: Array<{ id: Framework; label: string; pkg: string }> = [
-  { id: "react", label: "React", pkg: "@retro-ui/react" },
-  { id: "vue", label: "Vue", pkg: "@retro-ui/vue" },
-  { id: "svelte", label: "Svelte", pkg: "@retro-ui/svelte" },
+  { id: "react", label: "React", pkg: "@gregnazario/retro-ui-react" },
+  { id: "vue", label: "Vue", pkg: "@gregnazario/retro-ui-vue" },
+  { id: "svelte", label: "Svelte", pkg: "@gregnazario/retro-ui-svelte" },
 ];
 
 function snippetFor(theme: RetroTheme, framework: Framework): string {
   if (framework === "vue") {
     return `<script setup>
-import { RetroProvider, Window, Button } from "@retro-ui/vue";
-import { getTheme } from "@retro-ui/themes";
+import { RetroProvider, Window, Button } from "@gregnazario/retro-ui-vue";
+import { getTheme } from "@gregnazario/retro-ui-themes";
 </script>
 
 <template>
@@ -31,8 +31,8 @@ import { getTheme } from "@retro-ui/themes";
   }
   if (framework === "svelte") {
     return `<script>
-  import { RetroProvider, Window, Button } from "@retro-ui/svelte";
-  import { getTheme } from "@retro-ui/themes";
+  import { RetroProvider, Window, Button } from "@gregnazario/retro-ui-svelte";
+  import { getTheme } from "@gregnazario/retro-ui-themes";
 </script>
 
 <RetroProvider theme={getTheme("${theme.id}")}>
@@ -42,8 +42,8 @@ import { getTheme } from "@retro-ui/themes";
   </Window>
 </RetroProvider>`;
   }
-  return `import { RetroProvider, Window, Button } from "@retro-ui/react";
-import { getTheme } from "@retro-ui/themes";
+  return `import { RetroProvider, Window, Button } from "@gregnazario/retro-ui-react";
+import { getTheme } from "@gregnazario/retro-ui-themes";
 
 export function App() {
   return (

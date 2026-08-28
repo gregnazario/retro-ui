@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, provide, type ComputedRef } from "vue";
-import { getTheme, themeToCssVars, type RetroTheme } from "@retro-ui/themes";
+import { getTheme, themeToCssVars, type RetroTheme } from "@gregnazario/retro-ui-themes";
 import { RETRO_THEME_KEY } from "../context";
 
 const props = defineProps<{ theme: RetroTheme | string }>();

@@ -9,8 +9,8 @@ import {
   getTheme,
   themeToCssVars,
   type RetroTheme,
-} from "@retro-ui/themes";
-import "@retro-ui/styles/retro.css";
+} from "@gregnazario/retro-ui-themes";
+import "@gregnazario/retro-ui-styles/retro.css";
 
 const ThemeContext = createContext<RetroTheme | null>(null);
 

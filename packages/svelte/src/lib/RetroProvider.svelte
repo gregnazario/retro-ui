@@ -1,7 +1,7 @@
 <script lang="ts">
   import { setContext } from "svelte";
   import type { Snippet } from "svelte";
-  import { getTheme, themeToCssVars, type RetroTheme } from "@retro-ui/themes";
+  import { getTheme, themeToCssVars, type RetroTheme } from "@gregnazario/retro-ui-themes";
   import { RETRO_THEME_KEY, type RetroThemeContext } from "../context";
 
   let {

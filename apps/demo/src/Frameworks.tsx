@@ -8,7 +8,7 @@ import {
   Stack,
   TextInput,
   Window,
-} from "@retro-ui/react";
+} from "@gregnazario/retro-ui-react";
 import SveltePanel from "./frameworks/SveltePanel.svelte";
 import { SvelteHost } from "./frameworks/SvelteHost";
 import VuePanel from "./frameworks/VuePanel.vue";
@@ -62,7 +62,7 @@ export function Frameworks() {
         <section className="fw-panel">
           <header>
             <h2>React</h2>
-            <code>@retro-ui/react</code>
+            <code>@gregnazario/retro-ui-react</code>
           </header>
           <div className="fw-stage">
             <ReactPanel />
@@ -71,7 +71,7 @@ export function Frameworks() {
         <section className="fw-panel">
           <header>
             <h2>Vue</h2>
-            <code>@retro-ui/vue</code>
+            <code>@gregnazario/retro-ui-vue</code>
           </header>
           <div className="fw-stage">
             <VueHost component={VuePanel} />
@@ -80,7 +80,7 @@ export function Frameworks() {
         <section className="fw-panel">
           <header>
             <h2>Svelte</h2>
-            <code>@retro-ui/svelte</code>
+            <code>@gregnazario/retro-ui-svelte</code>
           </header>
           <div className="fw-stage">
             <SvelteHost component={SveltePanel} />
@@ -92,13 +92,13 @@ export function Frameworks() {
         <div>
           <h3>Install — React</h3>
           <pre>
-            <code>npm install @retro-ui/react @retro-ui/themes</code>
+            <code>npm install @gregnazario/retro-ui-react @gregnazario/retro-ui-themes</code>
           </pre>
         </div>
         <div>
           <h3>Install — Vue</h3>
           <pre>
-            <code>npm install @retro-ui/vue @retro-ui/themes</code>
+            <code>npm install @gregnazario/retro-ui-vue @gregnazario/retro-ui-themes</code>
           </pre>
         </div>
       </section>
@@ -106,15 +106,15 @@ export function Frameworks() {
         <div>
           <h3>Install — Svelte</h3>
           <pre>
-            <code>npm install @retro-ui/svelte @retro-ui/themes</code>
+            <code>npm install @gregnazario/retro-ui-svelte @gregnazario/retro-ui-themes</code>
           </pre>
         </div>
         <div>
           <h3>Shared core</h3>
           <pre>
             <code>{`All three adapters render the same class names,
-styled by @retro-ui/styles and themed by
-@retro-ui/themes. Switching frameworks
+styled by @gregnazario/retro-ui-styles and themed by
+@gregnazario/retro-ui-themes. Switching frameworks
 never changes your design tokens.`}</code>
           </pre>
         </div>

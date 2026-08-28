@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { RetroProvider } from "@retro-ui/react";
-import { EXPECTED_STYLE_IDS, getTheme, themes, type RetroTheme } from "@retro-ui/themes";
+import { RetroProvider } from "@gregnazario/retro-ui-react";
+import { EXPECTED_STYLE_IDS, getTheme, themes, type RetroTheme } from "@gregnazario/retro-ui-themes";
 import { KitchenSink } from "./KitchenSink";
 
 function themeFromHash(): RetroTheme {
@@ -50,8 +50,8 @@ export function App() {
     return [...map.entries()];
   }, [filtered]);
 
-  const snippet = `import { RetroProvider, Window, Button } from '@retro-ui/react'
-import { getTheme } from '@retro-ui/themes'
+  const snippet = `import { RetroProvider, Window, Button } from '@gregnazario/retro-ui-react'
+import { getTheme } from '@gregnazario/retro-ui-themes'
 
 <RetroProvider theme={getTheme('${theme.id}')}>
   <Window title="${theme.name}">

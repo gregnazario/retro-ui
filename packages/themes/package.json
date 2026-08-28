@@ -1,5 +1,5 @@
 {
-  "name": "@retro-ui/themes",
+  "name": "@gregnazario/retro-ui-themes",
   "version": "0.1.0",
   "description": "Design tokens and theme packs for retro-ui",
   "type": "module",

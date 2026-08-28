@@ -8,8 +8,8 @@ import {
   Stack,
   TextInput,
   Window,
-} from "@retro-ui/react";
-import type { RetroTheme } from "@retro-ui/themes";
+} from "@gregnazario/retro-ui-react";
+import type { RetroTheme } from "@gregnazario/retro-ui-themes";
 
 export function StyleCard({ theme }: { theme: RetroTheme }) {
   return (

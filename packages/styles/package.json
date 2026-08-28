@@ -1,5 +1,5 @@
 {
-  "name": "@retro-ui/styles",
+  "name": "@gregnazario/retro-ui-styles",
   "version": "0.1.0",
   "description": "Framework-agnostic component CSS shared by every retro-ui adapter",
   "type": "module",

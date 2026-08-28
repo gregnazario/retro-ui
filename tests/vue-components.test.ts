@@ -1,8 +1,8 @@
 import { mount } from "@vue/test-utils";
 import { h, nextTick } from "vue";
 import { describe, expect, it } from "vitest";
-import { Button, RetroProvider, Tabs, TextInput, Window } from "@retro-ui/vue";
-import { EXPECTED_STYLE_IDS, getTheme } from "@retro-ui/themes";
+import { Button, RetroProvider, Tabs, TextInput, Window } from "@gregnazario/retro-ui-vue";
+import { EXPECTED_STYLE_IDS, getTheme } from "@gregnazario/retro-ui-themes";
 
 function dispatchPointer(el: Element, type: string, x: number, y: number) {
   el.dispatchEvent(

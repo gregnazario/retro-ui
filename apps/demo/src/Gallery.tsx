@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { themes, type RetroTheme } from "@retro-ui/themes";
+import { themes, type RetroTheme } from "@gregnazario/retro-ui-themes";
 import { StyleCard } from "./StyleCard";
 
 function groupByEra(items: RetroTheme[]): Array<[string, RetroTheme[]]> {

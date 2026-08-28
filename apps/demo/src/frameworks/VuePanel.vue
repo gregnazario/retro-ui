@@ -9,7 +9,7 @@ import {
   Stack,
   TextInput,
   Window,
-} from "@retro-ui/vue";
+} from "@gregnazario/retro-ui-vue";
 
 const clicks = ref(0);
 </script>

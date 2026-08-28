@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@retro-ui/themes": path.resolve(import.meta.dirname, "../../packages/themes/src/index.ts"),
-      "@retro-ui/react": path.resolve(import.meta.dirname, "../../packages/react/src/index.ts"),
+      "@gregnazario/retro-ui-themes": path.resolve(import.meta.dirname, "../../packages/themes/src/index.ts"),
+      "@gregnazario/retro-ui-react": path.resolve(import.meta.dirname, "../../packages/react/src/index.ts"),
     },
   },
   server: {

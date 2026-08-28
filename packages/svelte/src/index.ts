@@ -1,4 +1,4 @@
-import "@retro-ui/styles/retro.css";
+import "@gregnazario/retro-ui-styles/retro.css";
 
 export { default as RetroProvider } from "./lib/RetroProvider.svelte";
 export { useRetroTheme } from "./context";

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, inject, ref, type ComputedRef, type CSSProperties } from "vue";
-import type { RetroTheme } from "@retro-ui/themes";
+import type { RetroTheme } from "@gregnazario/retro-ui-themes";
 import { RETRO_THEME_KEY } from "../context";
 import { bumpWindowStack } from "../windowStack";
 import TitleButton from "./TitleButton.vue";

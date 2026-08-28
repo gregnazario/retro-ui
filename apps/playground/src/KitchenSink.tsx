@@ -23,8 +23,8 @@ import {
   TextArea,
   TextInput,
   Window,
-} from "@retro-ui/react";
-import type { RetroTheme } from "@retro-ui/themes";
+} from "@gregnazario/retro-ui-react";
+import type { RetroTheme } from "@gregnazario/retro-ui-themes";
 
 function Clock() {
   const [now, setNow] = useState(() => new Date());

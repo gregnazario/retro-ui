@@ -1,4 +1,4 @@
-import "@retro-ui/styles/retro.css";
+import "@gregnazario/retro-ui-styles/retro.css";
 
 export { RETRO_THEME_KEY, useRetroTheme } from "./context";
 
