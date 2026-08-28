@@ -539,6 +539,16 @@
   z-index: 3;
 }
 
+.retro-taskbar[data-position="top"] {
+  top: 0;
+  bottom: auto;
+}
+
+.retro-desktop[data-panel="top"] .retro-desktop-stage {
+  padding-top: 56px;
+  padding-bottom: 24px;
+}
+
 .retro-start {
   font-weight: 700;
   flex: none;
@@ -689,6 +699,8 @@
 [data-engine="system7"] .retro-titlebar-title {
   background: #fff;
   border-inline: 1px solid #000;
+  text-align: center;
+  margin-left: 56px;
 }
 
 [data-engine="system7"] .retro-titlebar-controls {
@@ -766,6 +778,11 @@
   position: absolute;
   left: 8px;
   gap: 6px;
+}
+
+[data-engine="aqua"] .retro-titlebar-title {
+  text-align: center;
+  margin-left: 64px;
 }
 
 [data-engine="aqua"] .retro-ctrl {

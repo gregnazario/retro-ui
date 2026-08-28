@@ -115,6 +115,7 @@ export function defineTheme(
   base: RetroTokens = bevelWin95,
 ): RetroTheme {
   return {
+    taskbarPosition: "bottom",
     ...theme,
     tokens: { ...base, ...theme.tokens },
   };

@@ -127,8 +127,13 @@ export function Desktop({
   className?: string;
 }) {
   const theme = useRetroTheme();
+  const panel = taskbar ? (theme.taskbarPosition ?? "bottom") : "none";
   return (
-    <div className={cx("retro-desktop", className)} data-pattern={theme.desktopPattern}>
+    <div
+      className={cx("retro-desktop", className)}
+      data-pattern={theme.desktopPattern}
+      data-panel={panel}
+    >
       <div className="retro-desktop-stage">{children}</div>
       {taskbar}
     </div>
@@ -137,18 +142,24 @@ export function Desktop({
 
 export function TaskBar({
   startLabel = "Start",
+  position,
   clock,
   children,
 }: {
-  startLabel?: string;
+  startLabel?: string | null;
+  position?: "top" | "bottom";
   clock?: ReactNode;
   children?: ReactNode;
 }) {
+  const theme = useRetroTheme();
+  const resolvedPosition = position ?? theme.taskbarPosition ?? "bottom";
   return (
-    <footer className="retro-taskbar">
-      <button type="button" className="retro-button retro-start">
-        {startLabel}
-      </button>
+    <footer className="retro-taskbar" data-position={resolvedPosition}>
+      {startLabel != null ? (
+        <button type="button" className="retro-button retro-start">
+          {startLabel}
+        </button>
+      ) : null}
       {children}
       {clock ? <div className="retro-clock">{clock}</div> : null}
     </footer>

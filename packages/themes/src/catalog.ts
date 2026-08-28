@@ -77,6 +77,8 @@ export const EXPECTED_STYLE_IDS = [
   "macos9-platinum",
   "cde-motif",
   "classic-gnome",
+  "kde-3",
+  "xfce-4",
   "templeos",
   "teletext",
   "crt-phosphor",

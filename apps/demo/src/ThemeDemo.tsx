@@ -59,15 +59,21 @@ export function ThemeDemo({ theme }: { theme: RetroTheme }) {
 
   const osLike = ["Desktop OS", "App"].includes(theme.era);
 
+  const startLabel = theme.engine === "luna"
+    ? "start"
+    : ["system7", "platinum", "aqua"].includes(theme.engine)
+      ? null
+      : theme.id === "classic-gnome" || theme.id === "xfce-4"
+        ? "Applications"
+        : theme.id === "kde-3"
+          ? "K"
+          : "Start";
   return (
     <RetroProvider theme={theme} className="demo-theme">
       <Desktop
         taskbar={
           osLike ? (
-            <TaskBar
-              startLabel={theme.engine === "luna" ? "start" : "Start"}
-              clock={<Clock />}
-            >
+            <TaskBar startLabel={startLabel} clock={<Clock />}>
               <button type="button" className="retro-button retro-task">
                 {theme.name}
               </button>

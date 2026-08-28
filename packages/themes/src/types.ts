@@ -90,6 +90,8 @@ export interface RetroTheme {
   engine: ChromeEngine;
   controls: WindowControls;
   desktopPattern: DesktopPattern;
+  /** Where the desktop panel lives; macOS and GNOME styles use "top". */
+  taskbarPosition?: "top" | "bottom";
   fonts: {
     ui: string;
     mono: string;
