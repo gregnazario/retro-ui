@@ -28,7 +28,7 @@ jobs:
       - name: Typecheck (repo program)
         run: pnpm typecheck
 
-      - name: Typecheck (per package: tsc, vue-tsc, svelte-check)
+      - name: Typecheck per package (tsc, vue-tsc, svelte-check)
         run: pnpm check:packages
 
       - name: Test (React, Vue, and Svelte suites)
