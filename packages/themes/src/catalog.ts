@@ -79,6 +79,7 @@ export const EXPECTED_STYLE_IDS = [
   "classic-gnome",
   "kde-3",
   "xfce-4",
+  "unix-x11",
   "templeos",
   "teletext",
   "crt-phosphor",
