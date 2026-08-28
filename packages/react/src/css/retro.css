@@ -184,6 +184,7 @@
   display: flex;
   align-items: center;
   gap: 2px;
+  flex: none;
 }
 
 .retro-window-body {
@@ -364,6 +365,7 @@
 
 .retro-tablist {
   display: flex;
+  flex-wrap: wrap;
   gap: 2px;
   padding-left: 4px;
 }
@@ -379,6 +381,7 @@
   cursor: pointer;
   position: relative;
   top: 1px;
+  white-space: nowrap;
 }
 
 .retro-tab[aria-selected="true"] {
@@ -396,6 +399,7 @@
 
 .retro-menubar {
   display: flex;
+  flex-wrap: wrap;
   gap: 2px;
   background: var(--retro-surface);
   border-bottom: 1px solid var(--retro-border-dark);
@@ -477,6 +481,10 @@
 
 .retro-statusbar > * {
   flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   padding: 2px 6px;
   box-shadow: var(--retro-shadow-inset);
   min-height: 18px;
@@ -523,17 +531,23 @@
 
 .retro-start {
   font-weight: 700;
+  flex: none;
 }
 
 .retro-task {
   min-width: 120px;
+  max-width: 45%;
   justify-content: flex-start;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .retro-clock {
   margin-left: auto;
   padding: 2px 8px;
   box-shadow: var(--retro-shadow-inset);
+  flex: none;
+  white-space: nowrap;
 }
 
 .retro-alert {

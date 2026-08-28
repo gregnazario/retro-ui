@@ -44,16 +44,19 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 - Mac System 7, Mac OS 9 Platinum, Mac OS X Aqua
 - Windows 95, 98, 2000, XP Luna, 7 Aero
 - Amiga Workbench, NeXTSTEP, BeOS, OS/2 Warp, CDE / Motif, TempleOS
+- Classic GNOME
 
 ### Terminals and computers
 
 - Teletext, CRT Phosphor, DOS CGA, IBM 3270
 - NetHack ASCII, BBS ANSI, Midnight Commander
 - Matrix Rain, btop Meters, Commodore 64 BASIC
+- Jurassic Park UNIX
 
 ### Games and apps
 
 - 8-Bit Arcade, Game Boy DMG, PS1 Tech, Winamp Skin
+- Red Alert, Warcraft II
 
 ### Web / UI eras
 
