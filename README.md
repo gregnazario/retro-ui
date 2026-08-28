@@ -1,6 +1,6 @@
 # retro-ui
 
-A collection of libraries for **retro looking React UIs**. One shared component API, complete design systems for every expected style.
+A collection of libraries for **retro looking UIs**. One shared component API — shipped for **React, Vue, and Svelte** — with complete design systems for every expected style.
 
 Every style is rendered live, side by side, in the demo website — see [Demo website](#demo-website) for how to run it locally.
 
@@ -24,14 +24,58 @@ export function App() {
 
 | Package | What it is |
 | --- | --- |
-| `@retro-ui/themes` | Design tokens, metadata, and CSS variable maps for every style |
-| `@retro-ui/react` | Accessible React components that restyle through those tokens |
+| `@retro-ui/themes` | Design tokens, metadata, and CSS variable maps for every style (framework-agnostic) |
+| `@retro-ui/styles` | The shared component CSS: class-based, token-driven, engine-aware |
+| `@retro-ui/react` | React components that restyle through those tokens |
+| `@retro-ui/vue` | The same components as Vue 3 SFCs |
+| `@retro-ui/svelte` | The same components as Svelte 5 files |
 
 Switching styles is a theme change, not a rewrite:
 
 ```tsx
 <RetroProvider theme="aqua-osx">
   <Window title="Finder">{/* same components, Aqua chrome */}</Window>
+</RetroProvider>
+```
+
+## Frameworks
+
+Every adapter renders the same class names over the same CSS and tokens, so a
+design never changes when you change frameworks. Windows are draggable by
+their title bar (opt out with `draggable={false}`), and clicking a window
+brings it to the front — in all three frameworks.
+
+**Vue 3**
+
+```vue
+<script setup>
+import { RetroProvider, Window, Button } from "@retro-ui/vue";
+import { getTheme } from "@retro-ui/themes";
+</script>
+
+<template>
+  <RetroProvider :theme="getTheme('windows-95')">
+    <Window title="Welcome">
+      <p>Hello from 1995.</p>
+      <Button variant="primary">OK</Button>
+    </Window>
+  </RetroProvider>
+</template>
+```
+
+**Svelte 5**
+
+```svelte
+<script>
+  import { RetroProvider, Window, Button } from "@retro-ui/svelte";
+  import { getTheme } from "@retro-ui/themes";
+</script>
+
+<RetroProvider theme={getTheme("windows-95")}>
+  <Window title="Welcome">
+    <p>Hello from 1995.</p>
+    <Button variant="primary">OK</Button>
+  </Window>
 </RetroProvider>
 ```
 
@@ -91,8 +135,10 @@ The playground is a live kitchen sink for every style (`#windows-95`, `#gameboy-
 ## Demo website
 
 `apps/demo` is the shareable showcase: a gallery that renders every style live
-and side by side, plus a detail page per style with the full control panel,
-color tokens, and a copy-ready usage snippet.
+and side by side, a detail page per style with the full control panel, color
+tokens, and copy-ready usage snippets for React, Vue, and Svelte, plus a
+**Frameworks** page (`#/frameworks`) running React, Vue, and Svelte panels in
+the same page — every window draggable.
 
 ```bash
 pnpm demo          # dev server on :5174

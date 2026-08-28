@@ -1,7 +1,9 @@
-import type { CSSProperties, HTMLAttributes, InputHTMLAttributes, ReactNode } from "react";
+import type { CSSProperties, HTMLAttributes, InputHTMLAttributes, PointerEvent as ReactPointerEvent, ReactNode } from "react";
+import { useRef, useState } from "react";
 import { TitleButton } from "./Button";
 import { cx } from "../cx";
 import { useRetroTheme } from "../provider";
+import { bumpWindowStack } from "../windowStack";
 
 export function Window({
   title,
@@ -11,6 +13,7 @@ export function Window({
   children,
   style,
   width,
+  draggable = true,
 }: {
   title: string;
   active?: boolean;
@@ -19,17 +22,79 @@ export function Window({
   children?: ReactNode;
   style?: CSSProperties;
   width?: number | string;
+  draggable?: boolean;
 }) {
   const theme = useRetroTheme();
   const showControls = theme.controls !== "none";
+  const windowRef = useRef<HTMLElement | null>(null);
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const dragState = useRef<{
+    pointerId: number;
+    startX: number;
+    startY: number;
+    baseX: number;
+    baseY: number;
+  } | null>(null);
+
+  function bringToFront() {
+    if (windowRef.current) {
+      windowRef.current.style.zIndex = String(bumpWindowStack());
+    }
+  }
+
+  function onTitlePointerDown(event: ReactPointerEvent<HTMLElement>) {
+    if (!draggable || event.button !== 0) return;
+    if ((event.target as HTMLElement).closest(".retro-titlebar-controls button")) return;
+    bringToFront();
+    dragState.current = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      baseX: offset.x,
+      baseY: offset.y,
+    };
+    try {
+      event.currentTarget.setPointerCapture?.(event.pointerId);
+    } catch {
+      /* pointer capture unavailable — drag ends on release anyway */
+    }
+  }
+
+  function onTitlePointerMove(event: ReactPointerEvent<HTMLElement>) {
+    const drag = dragState.current;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    setOffset({
+      x: drag.baseX + event.clientX - drag.startX,
+      y: drag.baseY + event.clientY - drag.startY,
+    });
+  }
+
+  function endDrag(event: ReactPointerEvent<HTMLElement>) {
+    if (dragState.current?.pointerId === event.pointerId) {
+      dragState.current = null;
+    }
+  }
+
+  const dragStyle: CSSProperties = draggable
+    ? { transform: `translate(${offset.x}px, ${offset.y}px)` }
+    : {};
 
   return (
     <section
+      ref={windowRef}
       className={cx("retro-window", className)}
       data-active={active}
-      style={{ width, ...style }}
+      data-draggable={draggable}
+      style={{ width, ...dragStyle, ...style }}
+      onPointerDown={bringToFront}
     >
-      <header className="retro-titlebar">
+      <header
+        className="retro-titlebar"
+        onPointerDown={onTitlePointerDown}
+        onPointerMove={onTitlePointerMove}
+        onPointerUp={endDrag}
+        onPointerCancel={endDrag}
+      >
         {showControls && theme.controls === "mac" ? (
           <div className="retro-titlebar-controls">
             <TitleButton kind="close" />

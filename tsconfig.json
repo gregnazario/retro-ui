@@ -5,12 +5,16 @@
     "baseUrl": ".",
     "paths": {
       "@retro-ui/themes": ["packages/themes/src/index.ts"],
-      "@retro-ui/react": ["packages/react/src/index.ts"]
+      "@retro-ui/react": ["packages/react/src/index.ts"],
+      "@retro-ui/vue": ["packages/vue/src/index.ts"],
+      "@retro-ui/svelte": ["packages/svelte/src/index.ts"]
     }
   },
   "include": [
     "packages/themes/src",
     "packages/react/src",
+    "packages/vue/src",
+    "packages/svelte/src",
     "apps/playground/src",
     "tests"
   ]

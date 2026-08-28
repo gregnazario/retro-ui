@@ -1,0 +1,11 @@
+{
+  "name": "@retro-ui/styles",
+  "version": "0.1.0",
+  "description": "Framework-agnostic component CSS shared by every retro-ui adapter",
+  "type": "module",
+  "exports": {
+    "./retro.css": "./src/retro.css",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": ["**/*.css"]
+}

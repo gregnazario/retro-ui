@@ -5,7 +5,43 @@ import { ThemeDemo } from "./ThemeDemo";
 const isColor = (value: string) =>
 /^(#|rgb|hsl|linear|radial|conic|color|rgba|hsla)/.test(value);
 
-function snippetFor(theme: RetroTheme): string {
+type Framework = "react" | "vue" | "svelte";
+
+const FRAMEWORKS: Array<{ id: Framework; label: string; pkg: string }> = [
+  { id: "react", label: "React", pkg: "@retro-ui/react" },
+  { id: "vue", label: "Vue", pkg: "@retro-ui/vue" },
+  { id: "svelte", label: "Svelte", pkg: "@retro-ui/svelte" },
+];
+
+function snippetFor(theme: RetroTheme, framework: Framework): string {
+  if (framework === "vue") {
+    return `<script setup>
+import { RetroProvider, Window, Button } from "@retro-ui/vue";
+import { getTheme } from "@retro-ui/themes";
+</script>
+
+<template>
+  <RetroProvider :theme="getTheme('${theme.id}')">
+    <Window title="Welcome">
+      <p>Hello from ${theme.year}.</p>
+      <Button variant="primary">OK</Button>
+    </Window>
+  </RetroProvider>
+</template>`;
+  }
+  if (framework === "svelte") {
+    return `<script>
+  import { RetroProvider, Window, Button } from "@retro-ui/svelte";
+  import { getTheme } from "@retro-ui/themes";
+</script>
+
+<RetroProvider theme={getTheme("${theme.id}")}>
+  <Window title="Welcome">
+    <p>Hello from ${theme.year}.</p>
+    <Button variant="primary">OK</Button>
+  </Window>
+</RetroProvider>`;
+  }
   return `import { RetroProvider, Window, Button } from "@retro-ui/react";
 import { getTheme } from "@retro-ui/themes";
 
@@ -31,10 +67,12 @@ export function Detail({ id }: { id: string }) {
   }, [id]);
 
   const [copied, setCopied] = useState(false);
+  const [framework, setFramework] = useState<Framework>("react");
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
     setCopied(false);
+    setFramework("react");
   }, [id]);
 
   if (!theme) {
@@ -54,7 +92,7 @@ export function Detail({ id }: { id: string }) {
   const index = themes.findIndex((item) => item.id === theme.id);
   const prev = themes[(index - 1 + themes.length) % themes.length] ?? theme;
   const next = themes[(index + 1) % themes.length] ?? theme;
-  const snippet = snippetFor(theme);
+  const snippet = snippetFor(theme, framework);
   const colorTokens = Object.entries(theme.tokens).filter(([, value]) =>
     isColor(value),
   );
@@ -95,6 +133,10 @@ export function Detail({ id }: { id: string }) {
         </ul>
       </header>
 
+      <p className="stage-hint">
+        Tip: these are live components — drag the windows by their title bars,
+        flip the tabs, move the slider.
+      </p>
       <div className="demo-stage">
         <ThemeDemo theme={theme} />
       </div>
@@ -103,7 +145,20 @@ export function Detail({ id }: { id: string }) {
         <div>
           <h3>Usage</h3>
           <div className="snippet-bar">
-            <span>Theme id: <code>{theme.id}</code></span>
+            <div className="snippet-tabs" role="tablist" aria-label="Framework">
+              {FRAMEWORKS.map((fw) => (
+                <button
+                  key={fw.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={framework === fw.id}
+                  className={framework === fw.id ? "is-active" : undefined}
+                  onClick={() => setFramework(fw.id)}
+                >
+                  {fw.label}
+                </button>
+              ))}
+            </div>
             <button type="button" onClick={copySnippet}>
               {copied ? "Copied!" : "Copy"}
             </button>

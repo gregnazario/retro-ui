@@ -1,5 +1,6 @@
 import { themes } from "@retro-ui/themes";
 import { Detail } from "./Detail";
+import { Frameworks } from "./Frameworks";
 import { Gallery } from "./Gallery";
 import { useRoute } from "./router";
 
@@ -19,19 +20,21 @@ export function App() {
           <nav className="topbar-nav">
             <span className="topbar-count">{themes.length} styles</span>
             <a href="#/">Gallery</a>
+            <a href="#/frameworks">Frameworks</a>
           </nav>
         </div>
       </header>
       {route.view === "gallery" ? (
         <Gallery />
+      ) : route.view === "frameworks" ? (
+        <Frameworks />
       ) : (
         <Detail key={route.id} id={route.id} />
       )}
       <footer className="site-footer">
         <p>
-          Rendered live by <code>@retro-ui/react</code> and{" "}
-          <code>@retro-ui/themes</code> — one component API, every style. MIT
-          licensed.
+          React, Vue, and Svelte components over one shared token and CSS core —
+          one component API, every style. MIT licensed.
         </p>
       </footer>
     </div>

@@ -1,0 +1,20 @@
+{
+  "name": "@retro-ui/svelte",
+  "version": "0.1.0",
+  "description": "Svelte 5 components for retro-ui design systems",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  },
+  "dependencies": {
+    "@retro-ui/styles": "workspace:*",
+    "@retro-ui/themes": "workspace:*"
+  },
+  "devDependencies": {
+    "svelte": "^5.0.0"
+  }
+}

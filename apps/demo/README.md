@@ -19,8 +19,12 @@ so `dist/` can be deployed to any static host.
   window in that theme via `RetroProvider` — not a screenshot. The stage is
   `pointer-events: none` and an overlay link makes the whole card clickable.
 - `#/style/<id>` — Detail page for one style: the full interactive control
-  panel (desktop, taskbar, tabbed window, About dialog), a copy-ready usage
-  snippet, color-token swatches, and previous/next pager links.
+  panel (draggable windows, taskbar, tabs, About dialog), a copy-ready usage
+  snippet switchable between React / Vue / Svelte, color-token swatches, and
+  previous/next pager links.
+- `#/frameworks` — The same window rendered live by React, Vue, and Svelte
+  side by side (via small mount-host wrappers), proving the adapters share one
+  API and one look. Each panel is fully interactive and draggable.
 
 ## Structure
 

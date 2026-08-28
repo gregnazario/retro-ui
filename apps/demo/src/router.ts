@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 
-export type Route = { view: "gallery" } | { view: "style"; id: string };
+export type Route =
+  | { view: "gallery" }
+  | { view: "frameworks" }
+  | { view: "style"; id: string };
 
 function parse(hash: string): Route {
-  const id = hash.replace(/^#/, "").match(/^\/style\/([a-z0-9-]+)\/?$/i)?.[1];
+  const path = hash.replace(/^#/, "");
+  if (path === "/frameworks") return { view: "frameworks" };
+  const id = path.match(/^\/style\/([a-z0-9-]+)\/?$/i)?.[1];
   return id ? { view: "style", id } : { view: "gallery" };
 }
 

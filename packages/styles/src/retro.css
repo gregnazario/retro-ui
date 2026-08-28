@@ -142,6 +142,7 @@
 /* --- Window --- */
 
 .retro-window {
+  position: relative;
   background: var(--retro-surface);
   color: var(--retro-text);
   border-radius: var(--retro-radius-window);
@@ -151,6 +152,15 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.retro-window[data-draggable="true"] .retro-titlebar {
+  cursor: grab;
+  touch-action: none;
+}
+
+.retro-window[data-draggable="true"] .retro-titlebar:active {
+  cursor: grabbing;
 }
 
 .retro-titlebar {

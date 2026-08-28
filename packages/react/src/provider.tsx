@@ -10,7 +10,7 @@ import {
   themeToCssVars,
   type RetroTheme,
 } from "@retro-ui/themes";
-import "./css/retro.css";
+import "@retro-ui/styles/retro.css";
 
 const ThemeContext = createContext<RetroTheme | null>(null);
 

@@ -1,0 +1,20 @@
+{
+  "name": "@retro-ui/vue",
+  "version": "0.1.0",
+  "description": "Vue 3 components for retro-ui design systems",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "dependencies": {
+    "@retro-ui/styles": "workspace:*",
+    "@retro-ui/themes": "workspace:*"
+  },
+  "devDependencies": {
+    "vue": "^3.5.0"
+  }
+}

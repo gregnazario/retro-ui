@@ -37,10 +37,10 @@ export function Gallery() {
         <p className="eyebrow">The retro-ui demo</p>
         <h1>Every style, live.</h1>
         <p className="hero-lede">
-          {themes.length} complete design systems behind a single React
-          component API. Nothing below is a screenshot — every card is the
-          real <code>@retro-ui/react</code> library rendering that theme&rsquo;s
-          chrome, fonts, and tokens. Click any style to open its control panel.
+          {themes.length} complete design systems behind a single component API,
+          shipped for React, Vue, and Svelte. Nothing below is a screenshot —
+          every card is the real library rendering that theme&rsquo;s chrome,
+          fonts, and tokens. Click any style to open its control panel.
         </p>
         <ul className="hero-stats">
           <li>
@@ -52,8 +52,8 @@ export function Gallery() {
             <span>chrome engines</span>
           </li>
           <li>
-            <strong>20+</strong>
-            <span>components</span>
+            <strong>3</strong>
+            <span>frameworks</span>
           </li>
           <li>
             <strong>1</strong>

@@ -3,6 +3,9 @@ packages:
   # dirs belong to an abandoned earlier setup and break workspace resolution.
   - "packages/themes"
   - "packages/react"
+  - "packages/styles"
+  - "packages/vue"
+  - "packages/svelte"
   - "apps/playground"
   - "apps/demo"
 

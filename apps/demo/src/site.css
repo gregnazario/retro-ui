@@ -400,11 +400,89 @@ code {
   white-space: nowrap;
 }
 
+.stage-hint {
+  margin: 0 0 10px;
+  color: var(--site-muted);
+  font-size: 13px;
+}
+
 .demo-stage {
   height: 660px;
   overflow: auto;
   border: 1px solid var(--site-border);
   border-radius: 12px;
+}
+
+/* ---------- Frameworks page ---------- */
+
+.fw-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  padding: 8px 0 28px;
+}
+
+.fw-panel {
+  border: 1px solid var(--site-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--site-panel);
+}
+
+.fw-panel > header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--site-border);
+}
+
+.fw-panel h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.fw-panel header code {
+  color: var(--site-muted);
+  font-size: 12px;
+}
+
+.fw-stage {
+  height: 300px;
+}
+
+.fw-stage .retro-root,
+.fw-stage .retro-desktop {
+  height: 100%;
+}
+
+/* ---------- Snippet framework tabs ---------- */
+
+.snippet-tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.snippet-tabs button {
+  border: 1px solid var(--site-border);
+  border-radius: 7px;
+  background: var(--site-bg);
+  color: var(--site-muted);
+  font: inherit;
+  font-size: 13px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.snippet-tabs button:hover {
+  border-color: var(--site-border-strong);
+  color: var(--site-text);
+}
+
+.snippet-tabs button.is-active {
+  color: var(--site-text);
+  border-color: var(--site-accent);
 }
 
 .demo-theme,
