@@ -11,3 +11,7 @@ packages:
 
 onlyBuiltDependencies:
   - esbuild
+
+overrides:
+  # Dependabot alert #1: dev-server arbitrary file read, patched in 0.28.1
+  esbuild: ">=0.28.1"
