@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm --filter @retro-ui/playground dev",
+    "demo": "pnpm --filter @retro-ui/demo dev",
     "build": "pnpm --filter @retro-ui/themes build && pnpm --filter @retro-ui/react build && pnpm --filter @retro-ui/playground build",
+    "build:demo": "pnpm --filter @retro-ui/demo build",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit"

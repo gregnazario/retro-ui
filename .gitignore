@@ -11,5 +11,6 @@ apps/playground/dist
 packages/*/dist
 test-results
 playwright-report
+.playwright-mcp
 blob-report
 .pnpm-store

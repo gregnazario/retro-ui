@@ -2,6 +2,8 @@
 
 A collection of libraries for **retro looking React UIs**. One shared component API, complete design systems for every expected style.
 
+Every style is rendered live, side by side, in the demo website — see [Demo website](#demo-website) for how to run it locally.
+
 ```tsx
 import { RetroProvider, Window, Button } from "@retro-ui/react";
 import { getTheme } from "@retro-ui/themes";
@@ -35,7 +37,7 @@ Switching styles is a theme change, not a rewrite:
 
 ## Expected styles
 
-Desktop OS, terminals, games, web eras, and graphic systems are all first-class. The gallery at `apps/playground` renders the same control panel through each one.
+Desktop OS, terminals, games, web eras, and graphic systems are all first-class. The demo website renders every style live on a single page; the playground focuses on one style at a time (`#windows-95`, `#gameboy-dmg`, and so on).
 
 ### Desktop OS
 
@@ -82,6 +84,17 @@ pnpm dev
 ```
 
 The playground is a live kitchen sink for every style (`#windows-95`, `#gameboy-dmg`, and so on).
+
+## Demo website
+
+`apps/demo` is the shareable showcase: a gallery that renders every style live
+and side by side, plus a detail page per style with the full control panel,
+color tokens, and a copy-ready usage snippet.
+
+```bash
+pnpm demo          # dev server on :5174
+pnpm build:demo    # static build to apps/demo/dist
+```
 
 ## License
 
