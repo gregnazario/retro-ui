@@ -64,6 +64,8 @@ export interface RetroTokens {
   controlBgActive: string;
   controlBgPrimary: string;
   controlTextPrimary: string;
+  /** Button label color; falls back to the body text color when unset. */
+  controlText?: string;
   shadowOutset: string;
   shadowInset: string;
   shadowWindow: string;

@@ -216,7 +216,7 @@
   min-height: var(--retro-control-height);
   padding: 0 14px;
   background: var(--retro-control-bg);
-  color: var(--retro-text);
+  color: var(--retro-control-text, var(--retro-text));
   border: var(--retro-border-width) solid var(--retro-border-dark);
   border-top-color: var(--retro-border-high);
   border-left-color: var(--retro-border-light);
