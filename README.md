@@ -85,10 +85,10 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 
 ### Desktop OS
 
-- Mac System 7, Mac OS 9 Platinum, Mac OS X Aqua
+- Mac System 7, Mac OS 9 Platinum, Mac OS X Aqua, macOS Big Sur
 - Windows 95, 98, 2000, XP Luna, Vista, 7 Aero, 11 Fluent
-- Amiga Workbench, NeXTSTEP, BeOS, OS/2 Warp, CDE / Motif, TempleOS
-- Classic GNOME, KDE 3, XFCE 4, Unix / X11
+- Amiga Workbench, AmigaOS 4, NeXTSTEP, BeOS, OS/2 Warp, CDE / Motif, TempleOS
+- Classic GNOME, GNOME 40, KDE 3, KDE Plasma, XFCE 4, Unix / X11
 - Liquid Glass (iOS 27 / iPadOS 27 / macOS 27)
 
 ### Terminals and computers
@@ -106,6 +106,7 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 ### Web / UI eras
 
 - GeoCities Web 1.0, Web 2.0 Glossy, Frutiger Aero
+- Windows Phone Metro
 - Flat 2013, Glassmorphism, Neumorphism, Claymorphism
 - Brutalist Web, Default Browser, Y2K Chrome, Maximalist 90s Banner
 

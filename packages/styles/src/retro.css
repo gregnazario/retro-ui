@@ -1189,3 +1189,32 @@
   min-width: 0;
   max-width: none;
 }
+
+
+/* --- Theme polish: modern flat systems on the web engine --- */
+
+[data-theme="windows-phone-metro"] .retro-window {
+  border: 0;
+}
+
+[data-theme="windows-phone-metro"] .retro-titlebar {
+  text-transform: lowercase;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+[data-theme="windows-phone-metro"] .retro-button {
+  font-weight: 400;
+}
+
+[data-theme="gnome-40"] .retro-window {
+  border: 1px solid var(--retro-border-light);
+}
+
+[data-theme="gnome-40"] .retro-titlebar {
+  text-transform: none;
+}
+
+[data-theme="gnome-40"] .retro-button {
+  font-weight: 400;
+}
