@@ -1137,3 +1137,55 @@
   border-bottom: 1px solid var(--retro-border-light);
   border-top: none;
 }
+
+
+/* --- Engine: fluent (Windows 11) --- */
+
+[data-engine="fluent"] .retro-window {
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  backdrop-filter: blur(20px) saturate(1.3);
+  border: 1px solid var(--retro-border-light);
+}
+
+[data-engine="fluent"] .retro-titlebar {
+  background: transparent;
+}
+
+[data-engine="fluent"] .retro-ctrl {
+  width: 34px;
+  height: 28px;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  box-shadow: none;
+  font-size: 10px;
+  color: var(--retro-titlebar-text);
+}
+
+[data-engine="fluent"] .retro-ctrl:hover {
+  background: rgba(0, 0, 0, 0.07);
+}
+
+[data-engine="fluent"] .retro-ctrl.close:hover {
+  background: #c42b1c;
+  color: #ffffff;
+}
+
+[data-engine="fluent"] .retro-taskbar {
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  backdrop-filter: blur(24px) saturate(1.4);
+  justify-content: center;
+}
+
+[data-engine="fluent"] .retro-clock {
+  position: absolute;
+  right: 8px;
+  margin-left: 0;
+}
+
+[data-engine="fluent"] .retro-task {
+  min-width: 0;
+  max-width: none;
+}

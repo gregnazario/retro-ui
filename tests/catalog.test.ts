@@ -50,6 +50,7 @@ describe("design system catalog", () => {
         "soft",
         "graphic",
         "glass",
+        "fluent",
       ]),
     );
   });

@@ -13,7 +13,8 @@ export type ChromeEngine =
   | "web"
   | "soft"
   | "graphic"
-  | "glass";
+  | "glass"
+  | "fluent";
 
 export type WindowControls = "win" | "mac" | "next" | "beos" | "amiga" | "none";
 

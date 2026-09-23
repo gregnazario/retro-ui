@@ -86,7 +86,7 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 ### Desktop OS
 
 - Mac System 7, Mac OS 9 Platinum, Mac OS X Aqua
-- Windows 95, 98, 2000, XP Luna, Vista, 7 Aero
+- Windows 95, 98, 2000, XP Luna, Vista, 7 Aero, 11 Fluent
 - Amiga Workbench, NeXTSTEP, BeOS, OS/2 Warp, CDE / Motif, TempleOS
 - Classic GNOME, KDE 3, XFCE 4, Unix / X11
 - Liquid Glass (iOS 27 / iPadOS 27 / macOS 27)
@@ -123,7 +123,7 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 
 The `TaskBar` sits at the bottom by default; macOS and GNOME styles position it
 as a top menu bar automatically (override per use with `position="top"`).
-Chrome (title-bar controls, bevels, gel buttons, scanlines, traffic lights) comes from each theme's **engine**: `bevel`, `luna`, `aero`, `system7`, `platinum`, `aqua`, `nextstep`, `beos`, `amiga`, `pixel`, `terminal`, `web`, `soft`, `graphic`, `glass`.
+Chrome (title-bar controls, bevels, gel buttons, scanlines, traffic lights) comes from each theme's **engine**: `bevel`, `luna`, `aero`, `system7`, `platinum`, `aqua`, `nextstep`, `beos`, `amiga`, `pixel`, `terminal`, `web`, `soft`, `graphic`, `glass`, `fluent`.
 
 ## Develop
 

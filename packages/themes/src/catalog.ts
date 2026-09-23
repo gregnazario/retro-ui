@@ -70,6 +70,7 @@ export const EXPECTED_STYLE_IDS = [
   "windows-xp-luna",
   "windows-vista",
   "windows-7-aero",
+  "windows-11",
   "aqua-osx",
   "amiga-workbench",
   "nextstep",
