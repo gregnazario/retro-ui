@@ -86,7 +86,7 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 ### Desktop OS
 
 - Mac System 7, Mac OS 9 Platinum, Mac OS X Aqua
-- Windows 95, 98, 2000, XP Luna, 7 Aero
+- Windows 95, 98, 2000, XP Luna, Vista, 7 Aero
 - Amiga Workbench, NeXTSTEP, BeOS, OS/2 Warp, CDE / Motif, TempleOS
 - Classic GNOME, KDE 3, XFCE 4, Unix / X11
 - Liquid Glass (iOS 27 / iPadOS 27 / macOS 27)

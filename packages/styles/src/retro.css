@@ -657,6 +657,12 @@
   background: var(--retro-surface);
 }
 
+[data-engine="aero"] .retro-titlebar {
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.85),
+    0 0 2px rgba(255, 255, 255, 0.9);
+}
+
 [data-engine="aero"] .retro-ctrl {
   width: 28px;
   height: 18px;
