@@ -49,6 +49,7 @@ describe("design system catalog", () => {
         "web",
         "soft",
         "graphic",
+        "glass",
       ]),
     );
   });

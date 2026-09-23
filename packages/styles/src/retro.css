@@ -1052,3 +1052,82 @@
     animation: none !important;
   }
 }
+
+
+/* --- Engine: glass (Apple Liquid Glass, iOS/iPadOS/macOS 27) --- */
+
+[data-engine="glass"] .retro-window {
+  background: var(--retro-surface);
+  -webkit-backdrop-filter: blur(28px) saturate(1.8);
+  backdrop-filter: blur(28px) saturate(1.8);
+  border: 1px solid var(--retro-border-high);
+  overflow: hidden;
+}
+
+[data-engine="glass"] .retro-titlebar {
+  background: transparent;
+  font-family: var(--retro-font-ui);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+[data-engine="glass"] .retro-titlebar-title {
+  background: transparent;
+}
+
+[data-engine="glass"] .retro-ctrl {
+  width: 12px;
+  height: 12px;
+  min-height: 0;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.15);
+  font-size: 0;
+}
+
+[data-engine="glass"] .retro-ctrl.close {
+  background: radial-gradient(circle at 30% 30%, #ff9a8a, #e23d2e);
+}
+
+[data-engine="glass"] .retro-ctrl.min {
+  background: radial-gradient(circle at 30% 30%, #ffe680, #e0b000);
+}
+
+[data-engine="glass"] .retro-ctrl.max {
+  background: radial-gradient(circle at 30% 30%, #b6f08a, #3ea02a);
+}
+
+[data-engine="glass"] .retro-button {
+  border-color: var(--retro-border-light);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+[data-engine="glass"] .retro-field,
+[data-engine="glass"] .retro-select,
+[data-engine="glass"] .retro-textarea,
+[data-engine="glass"] .retro-progress {
+  border-color: var(--retro-border-dark);
+}
+
+[data-engine="glass"] .retro-tab {
+  border: 1px solid var(--retro-border-light);
+  border-bottom: none;
+}
+
+[data-engine="glass"] .retro-tab[aria-selected="true"] {
+  background: var(--retro-surface-alt);
+}
+
+[data-engine="glass"] .retro-taskbar {
+  -webkit-backdrop-filter: blur(28px) saturate(1.8);
+  backdrop-filter: blur(28px) saturate(1.8);
+  border-top: 1px solid var(--retro-border-light);
+  border-bottom: none;
+}
+
+[data-engine="glass"] .retro-taskbar[data-position="top"] {
+  border-bottom: 1px solid var(--retro-border-light);
+  border-top: none;
+}

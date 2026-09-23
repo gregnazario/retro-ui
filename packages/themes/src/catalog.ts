@@ -80,6 +80,7 @@ export const EXPECTED_STYLE_IDS = [
   "kde-3",
   "xfce-4",
   "unix-x11",
+  "liquid-glass",
   "templeos",
   "teletext",
   "crt-phosphor",
