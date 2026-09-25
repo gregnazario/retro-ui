@@ -1224,6 +1224,7 @@
 
 [data-theme="ios-6"] .retro-button,
 [data-theme="ios-7"] .retro-button,
+[data-theme="android-holo"] .retro-button,
 [data-theme="material-design"] .retro-button,
 [data-theme="material-you"] .retro-button,
 [data-theme="modern-saas"] .retro-button,
@@ -1265,4 +1266,85 @@
 
 [data-theme="pip-boy"] .retro-titlebar {
   border-bottom: 2px solid #1d8a2e;
+}
+
+/* Mobile OS polish */
+[data-theme="blackberry-os"] .retro-button,
+[data-theme="magic-cap"] .retro-button,
+[data-theme="magic-cap"] .retro-titlebar-title {
+  font-weight: 700;
+}
+
+[data-theme="android-holo"] .retro-titlebar {
+  border-bottom: 2px solid #2a9dc9;
+}
+
+[data-theme="android-holo"] .retro-tab {
+  border-radius: 0;
+}
+
+[data-theme="android-holo"] .retro-tab[aria-selected="true"] {
+  box-shadow: inset 0 -2px 0 #33b5e5;
+}
+
+[data-theme="android-holo"] .retro-field:focus {
+  border-color: #33b5e5;
+  box-shadow: 0 1px 0 #33b5e5;
+}
+
+[data-theme="magic-cap"] .retro-titlebar-title {
+  display: block;
+  text-align: center;
+}
+
+/* Mobile taskbar chrome */
+[data-theme="palm-webos"] .retro-taskbar {
+  background: linear-gradient(#3a4046, #171a1e);
+  color: #f4f5f4;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="palm-webos"] .retro-task {
+  background: transparent;
+  color: #f4f5f4;
+  box-shadow: none;
+}
+
+[data-theme="windows-mobile"] .retro-taskbar {
+  background: linear-gradient(#4a97e0, #1c5fa8);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+[data-theme="windows-mobile"] .retro-task {
+  background: transparent;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+[data-theme="symbian-s60"] .retro-taskbar {
+  background: linear-gradient(#4a97dd, #1a63b0);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+[data-theme="symbian-s60"] .retro-task {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+[data-theme="android-holo"] .retro-taskbar {
+  border-top: 2px solid #2a9dc9;
+}
+
+[data-theme="blackberry-os"] .retro-taskbar {
+  background: linear-gradient(#3c4650, #14181e);
+  color: #f4f6f8;
+}
+
+[data-theme="blackberry-os"] .retro-task {
+  background: transparent;
+  color: #f4f6f8;
+  box-shadow: none;
 }

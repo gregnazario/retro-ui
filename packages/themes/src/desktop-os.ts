@@ -1323,7 +1323,7 @@ export const desktopOsThemes: RetroTheme[] = [
     slug: "windows-phone-metro",
     name: "Windows Phone Metro",
     year: 2011,
-    era: "Web/UI",
+    era: "Mobile",
     description:
       "Metro tiles: black void, cyan accent blocks, light lowercase type, zero chrome and zero borders.",
     tags: ["windows-phone", "metro", "flat", "tiles"],

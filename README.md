@@ -92,6 +92,12 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 - Classic GNOME, GNOME 40, KDE 3, KDE Plasma, XFCE 4, Unix / X11
 - Liquid Glass (iOS 27 / iPadOS 27 / macOS 27)
 
+### Mobile
+
+- Android Holo, BlackBerry OS, Symbian S60
+- Palm webOS, Windows Mobile, Windows Phone Metro
+- iOS 6, iOS 7, Newton OS, Magic Cap (General Magic)
+
 ### Terminals and computers
 
 - Teletext, CRT Phosphor, DOS CGA, IBM 3270, Turbo Vision, Symbolics Genera
@@ -109,7 +115,7 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 ### Web / UI eras
 
 - GeoCities Web 1.0, Web 2.0 Glossy, Frutiger Aero
-- Windows Phone Metro, iOS 6, iOS 7, Skeuomorphic 2010
+- Skeuomorphic 2010
 - Material Design, Material You, Bootstrap 3
 - Modern SaaS, AI Chat
 - Flat 2013, Glassmorphism, Neumorphism, Claymorphism

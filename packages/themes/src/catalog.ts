@@ -1,5 +1,6 @@
 import { aestheticThemes } from "./aesthetic";
 import { desktopOsThemes } from "./desktop-os";
+import { mobileThemes } from "./mobile";
 import { gamingThemes } from "./gaming";
 import { terminalThemes } from "./terminal";
 import type { RetroTheme, RetroTokens } from "./types";
@@ -7,6 +8,7 @@ import { webUiThemes } from "./web-ui";
 
 export const themes: RetroTheme[] = [
   ...desktopOsThemes,
+  ...mobileThemes,
   ...terminalThemes,
   ...gamingThemes,
   ...webUiThemes,
@@ -80,6 +82,13 @@ export const EXPECTED_STYLE_IDS = [
   "windows-phone-metro",
   "ios-6",
   "ios-7",
+  "android-holo",
+  "blackberry-os",
+  "symbian-s60",
+  "palm-webos",
+  "windows-mobile",
+  "newton-os",
+  "magic-cap",
   "skeuomorphic-2010",
   "material-design",
   "material-you",

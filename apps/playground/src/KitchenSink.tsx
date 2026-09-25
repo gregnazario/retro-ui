@@ -54,7 +54,7 @@ export function KitchenSink({ theme }: { theme: RetroTheme }) {
     [theme],
   );
 
-  const osLike = ["Desktop OS", "App"].includes(theme.era);
+  const osLike = ["Desktop OS", "App", "Mobile"].includes(theme.era);
 
   const startLabel = theme.engine === "luna"
     ? "start"
@@ -69,6 +69,11 @@ export function KitchenSink({ theme }: { theme: RetroTheme }) {
         "palm-os",
         "risc-os",
         "open-look",
+        "android-holo",
+        "blackberry-os",
+        "palm-webos",
+        "newton-os",
+        "magic-cap",
       ].includes(theme.id)
       ? null
       : theme.id === "classic-gnome" || theme.id === "xfce-4"
@@ -77,7 +82,9 @@ export function KitchenSink({ theme }: { theme: RetroTheme }) {
           ? "Activities"
         : theme.id === "kde-3"
           ? "K"
-          : "Start";
+          : theme.id === "symbian-s60"
+            ? "Options"
+            : "Start";
   return (
     <Desktop
       taskbar={

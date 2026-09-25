@@ -754,10 +754,10 @@ export const webUiThemes: RetroTheme[] = [
   }),
   defineTheme({
     id: "ios-6",
+    era: "Mobile",
     slug: "ios-6",
     name: "iOS 6",
     year: 2012,
-    era: "Web/UI",
     description:
       "Peak skeuomorphic iPhone: striped blue-gray nav bars, linen backgrounds, glossy gel buttons, stitched detail.",
     tags: ["apple", "iphone", "skeuomorphic", "linen"],
@@ -814,10 +814,10 @@ export const webUiThemes: RetroTheme[] = [
   }),
   defineTheme({
     id: "ios-7",
+    era: "Mobile",
     slug: "ios-7",
     name: "iOS 7 Flat",
     year: 2013,
-    era: "Web/UI",
     description:
       "The great flattening: white panes, hairline separators, ultra-light type, and #007aff links everywhere.",
     tags: ["apple", "iphone", "flat", "jony-ive"],
