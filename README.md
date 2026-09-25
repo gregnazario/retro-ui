@@ -90,13 +90,15 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 - Windows 3.1, 95, 98, 2000, XP Luna, Vista, 7 Aero, 11 Fluent
 - Amiga Workbench, AmigaOS 4, NeXTSTEP, BeOS, OS/2 Warp, CDE / Motif, TempleOS
 - Classic GNOME, GNOME 40, KDE 3, KDE Plasma, XFCE 4, Unix / X11
+- SerenityOS, Haiku, elementary OS, Ubuntu Unity
+- Windows Longhorn, GeoWorks Ensemble, Plan 9
 - Liquid Glass (iOS 27 / iPadOS 27 / macOS 27)
 
 ### Mobile
 
 - Android Holo, BlackBerry OS, Symbian S60
 - Palm webOS, Windows Mobile, Windows Phone Metro
-- iOS 6, iOS 7, Newton OS, Magic Cap (General Magic)
+- iOS 6, iOS 7, Newton OS, Magic Cap (General Magic), MeeGo N9
 
 ### Terminals and computers
 
@@ -109,9 +111,11 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 
 - 8-Bit Arcade, Game Boy DMG, PS1 Tech, Winamp Skin
 - PS3 XMB, Xbox 360 Blades, Wii Menu, Switch Home
+- Persona 5, Diablo II, Final Fantasy PS1, Portal / Aperture, Myst
 - Red Alert, Warcraft II
 - Pip-Boy 3000, DOOM HUD, SCUMM Adventures
 - MSN Messenger, AIM, mIRC
+- phpBB Forums, MySpace, LimeWire, QuickTime 4
 
 ### Web / UI eras
 
@@ -126,7 +130,7 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 
 - Cassette Futurism, Vaporwave, Memphis, Braun / Rams
 - Tron Vector, VHS Tracking, Risograph, Blueprint / CAD
-- Swiss Style, Bauhaus, Pop Art, Op Art
+- Swiss Style, Bauhaus, Art Deco, Pop Art, Op Art
 - Hypnagogic, Monochrome Zen, Wireframe Sketch
 - Glitch Databend, Duotone Poster, Grid Paper
 - 90s Grunge, Corporate Memphis, Solarpunk, Teenage Engineering

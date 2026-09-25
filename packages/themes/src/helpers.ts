@@ -13,6 +13,9 @@ export const comicStack = `"Comic Neue", "Comic Sans MS", cursive, sans-serif`;
 export const displayStack = `"Archivo Black", "Arial Black", Impact, sans-serif`;
 export const orbitronStack = `Orbitron, "Segoe UI", sans-serif`;
 export const plexSans = `"IBM Plex Sans", "Segoe UI", sans-serif`;
+export const ubuntuStack = `Ubuntu, "Segoe UI", sans-serif`;
+export const cinzelStack = `Cinzel, "Times New Roman", serif`;
+export const verdanaStack = `Verdana, Geneva, Tahoma, sans-serif`;
 
 export const bevelWin95: RetroTokens = {
   desktop: "#008080",

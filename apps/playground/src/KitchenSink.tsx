@@ -58,7 +58,7 @@ export function KitchenSink({ theme }: { theme: RetroTheme }) {
     ["Desktop OS", "App", "Mobile"].includes(theme.era)
     || ["ps3-xmb", "xbox-blades", "wii-menu", "switch-home"].includes(theme.id);
 
-  const startLabel = theme.engine === "luna"
+  const startLabel = theme.engine === "luna" || theme.id === "longhorn"
     ? "start"
     : ["system7", "platinum", "aqua", "glass", "fluent"].includes(theme.engine)
       || [
@@ -79,6 +79,12 @@ export function KitchenSink({ theme }: { theme: RetroTheme }) {
         "ps3-xmb",
         "xbox-blades",
         "switch-home",
+        "haiku-os",
+        "elementary-os",
+        "ubuntu-unity",
+        "geos",
+        "plan-9",
+        "meego-n9",
       ].includes(theme.id)
       ? null
       : theme.id === "classic-gnome" || theme.id === "xfce-4"

@@ -1227,6 +1227,10 @@
 [data-theme="android-holo"] .retro-button,
 [data-theme="ps3-xmb"] .retro-button,
 [data-theme="switch-home"] .retro-button,
+[data-theme="elementary-os"] .retro-button,
+[data-theme="ubuntu-unity"] .retro-button,
+[data-theme="plan-9"] .retro-button,
+[data-theme="meego-n9"] .retro-button,
 [data-theme="material-design"] .retro-button,
 [data-theme="material-you"] .retro-button,
 [data-theme="modern-saas"] .retro-button,
@@ -1382,4 +1386,47 @@
   border-radius: 999px;
   box-shadow: 0 4px 16px rgba(20, 24, 32, 0.18);
   padding: 5px 14px;
+}
+
+/* Cult OS, game UI, deco, and web-era polish */
+[data-theme="persona-5"] .retro-button {
+  transform: skewX(-8deg);
+}
+
+[data-theme="persona-5"] .retro-titlebar-title {
+  display: inline-block;
+  transform: skewX(-8deg);
+  letter-spacing: 0.08em;
+}
+
+[data-theme="art-deco"] .retro-titlebar-title {
+  letter-spacing: 0.18em;
+}
+
+[data-theme="ubuntu-unity"] .retro-taskbar {
+  background: rgba(20, 5, 14, 0.92);
+  color: #dfdbd2;
+  box-shadow: none;
+}
+
+[data-theme="ubuntu-unity"] .retro-task {
+  background: transparent;
+  color: #dfdbd2;
+  box-shadow: none;
+}
+
+[data-theme="elementary-os"] .retro-taskbar {
+  background: rgba(28, 34, 40, 0.88);
+  color: #f4f6f8;
+  box-shadow: none;
+}
+
+[data-theme="elementary-os"] .retro-task {
+  background: transparent;
+  color: #f4f6f8;
+  box-shadow: none;
+}
+
+[data-theme="quicktime-4"] .retro-button-primary {
+  border-radius: 999px;
 }

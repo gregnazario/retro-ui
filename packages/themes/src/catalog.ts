@@ -1,5 +1,6 @@
 import { aestheticThemes } from "./aesthetic";
 import { consoleThemes } from "./console";
+import { cultOsThemes } from "./cult-os";
 import { desktopOsThemes } from "./desktop-os";
 import { mobileThemes } from "./mobile";
 import { gamingThemes } from "./gaming";
@@ -9,6 +10,7 @@ import { webUiThemes } from "./web-ui";
 
 export const themes: RetroTheme[] = [
   ...desktopOsThemes,
+  ...cultOsThemes,
   ...mobileThemes,
   ...consoleThemes,
   ...terminalThemes,
@@ -95,6 +97,24 @@ export const EXPECTED_STYLE_IDS = [
   "xbox-blades",
   "wii-menu",
   "switch-home",
+  "serenityos",
+  "haiku-os",
+  "elementary-os",
+  "ubuntu-unity",
+  "longhorn",
+  "geos",
+  "plan-9",
+  "persona-5",
+  "diablo-2",
+  "ff-ps1",
+  "portal-aperture",
+  "myst",
+  "art-deco",
+  "phpbb-forum",
+  "myspace-profile",
+  "limewire",
+  "quicktime-4",
+  "meego-n9",
   "skeuomorphic-2010",
   "material-design",
   "material-you",
