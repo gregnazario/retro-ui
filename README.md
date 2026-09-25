@@ -86,27 +86,32 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 ### Desktop OS
 
 - Mac System 7, Mac OS 9 Platinum, Mac OS X Aqua, macOS Big Sur
-- Windows 95, 98, 2000, XP Luna, Vista, 7 Aero, 11 Fluent
+- Xerox Star, Atari TOS / GEM, Palm OS, RISC OS, OPEN LOOK
+- Windows 3.1, 95, 98, 2000, XP Luna, Vista, 7 Aero, 11 Fluent
 - Amiga Workbench, AmigaOS 4, NeXTSTEP, BeOS, OS/2 Warp, CDE / Motif, TempleOS
 - Classic GNOME, GNOME 40, KDE 3, KDE Plasma, XFCE 4, Unix / X11
 - Liquid Glass (iOS 27 / iPadOS 27 / macOS 27)
 
 ### Terminals and computers
 
-- Teletext, CRT Phosphor, DOS CGA, IBM 3270
+- Teletext, CRT Phosphor, DOS CGA, IBM 3270, Turbo Vision, Symbolics Genera
 - NetHack ASCII, BBS ANSI, Midnight Commander
 - Matrix Rain, btop Meters, Commodore 64 BASIC
-- Jurassic Park UNIX
+- Jurassic Park UNIX, Star Trek LCARS, WarGames WOPR
 
 ### Games and apps
 
 - 8-Bit Arcade, Game Boy DMG, PS1 Tech, Winamp Skin
 - Red Alert, Warcraft II
+- Pip-Boy 3000, DOOM HUD, SCUMM Adventures
+- MSN Messenger, AIM, mIRC
 
 ### Web / UI eras
 
 - GeoCities Web 1.0, Web 2.0 Glossy, Frutiger Aero
-- Windows Phone Metro
+- Windows Phone Metro, iOS 6, iOS 7, Skeuomorphic 2010
+- Material Design, Material You, Bootstrap 3
+- Modern SaaS, AI Chat
 - Flat 2013, Glassmorphism, Neumorphism, Claymorphism
 - Brutalist Web, Default Browser, Y2K Chrome, Maximalist 90s Banner
 
@@ -117,6 +122,7 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 - Swiss Style, Bauhaus, Pop Art, Op Art
 - Hypnagogic, Monochrome Zen, Wireframe Sketch
 - Glitch Databend, Duotone Poster, Grid Paper
+- 90s Grunge, Corporate Memphis, Solarpunk, Teenage Engineering
 
 ## Components
 

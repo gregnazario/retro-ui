@@ -1218,3 +1218,51 @@
 [data-theme="gnome-40"] .retro-button {
   font-weight: 400;
 }
+
+
+/* --- Theme polish: modern flat systems --- */
+
+[data-theme="ios-6"] .retro-button,
+[data-theme="ios-7"] .retro-button,
+[data-theme="material-design"] .retro-button,
+[data-theme="material-you"] .retro-button,
+[data-theme="modern-saas"] .retro-button,
+[data-theme="ai-chat"] .retro-button,
+[data-theme="skeuomorphic-2010"] .retro-button,
+[data-theme="msn-messenger"] .retro-button,
+[data-theme="aim"] .retro-button,
+[data-theme="corporate-memphis"] .retro-button,
+[data-theme="solarpunk"] .retro-button {
+  text-transform: none;
+  font-weight: 500;
+}
+
+[data-theme="bootstrap-3"] .retro-window {
+  border: 1px solid #dddddd;
+}
+
+[data-theme="bootstrap-3"] .retro-titlebar {
+  text-transform: none;
+}
+
+[data-theme="bootstrap-3"] .retro-button {
+  font-weight: 400;
+}
+
+[data-theme="lcars"] .retro-titlebar-title {
+  background: transparent;
+}
+
+
+/* Pip-Boy: layered instrument bezels */
+[data-theme="pip-boy"] .retro-window {
+  border: 2px solid #1d8a2e;
+  box-shadow:
+    inset 0 0 0 4px #06180a,
+    inset 0 0 0 5px #1d8a2e,
+    0 0 28px rgba(42, 255, 79, 0.3);
+}
+
+[data-theme="pip-boy"] .retro-titlebar {
+  border-bottom: 2px solid #1d8a2e;
+}

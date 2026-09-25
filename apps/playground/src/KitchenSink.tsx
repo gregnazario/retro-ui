@@ -59,7 +59,17 @@ export function KitchenSink({ theme }: { theme: RetroTheme }) {
   const startLabel = theme.engine === "luna"
     ? "start"
     : ["system7", "platinum", "aqua", "glass", "fluent"].includes(theme.engine)
-      || ["unix-x11", "amigaos-4", "kde-plasma"].includes(theme.id)
+      || [
+        "unix-x11",
+        "amigaos-4",
+        "kde-plasma",
+        "windows-3-1",
+        "xerox-star",
+        "atari-tos",
+        "palm-os",
+        "risc-os",
+        "open-look",
+      ].includes(theme.id)
       ? null
       : theme.id === "classic-gnome" || theme.id === "xfce-4"
         ? "Applications"
