@@ -108,6 +108,7 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 ### Games and apps
 
 - 8-Bit Arcade, Game Boy DMG, PS1 Tech, Winamp Skin
+- PS3 XMB, Xbox 360 Blades, Wii Menu, Switch Home
 - Red Alert, Warcraft II
 - Pip-Boy 3000, DOOM HUD, SCUMM Adventures
 - MSN Messenger, AIM, mIRC

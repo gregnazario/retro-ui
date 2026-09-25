@@ -1225,6 +1225,8 @@
 [data-theme="ios-6"] .retro-button,
 [data-theme="ios-7"] .retro-button,
 [data-theme="android-holo"] .retro-button,
+[data-theme="ps3-xmb"] .retro-button,
+[data-theme="switch-home"] .retro-button,
 [data-theme="material-design"] .retro-button,
 [data-theme="material-you"] .retro-button,
 [data-theme="modern-saas"] .retro-button,
@@ -1347,4 +1349,37 @@
   background: transparent;
   color: #f4f6f8;
   box-shadow: none;
+}
+
+/* Console shell polish */
+[data-theme="ps3-xmb"] .retro-titlebar-title,
+[data-theme="ps3-xmb"] .retro-clock {
+  text-shadow: 0 0 12px rgba(140, 170, 255, 0.55);
+}
+
+[data-theme="ps3-xmb"] .retro-taskbar {
+  background: linear-gradient(180deg, rgba(4, 8, 18, 0.6), rgba(4, 8, 18, 0));
+  color: #f4f6ff;
+  box-shadow: none;
+}
+
+[data-theme="ps3-xmb"] .retro-task {
+  background: transparent;
+  color: #f4f6ff;
+  box-shadow: none;
+}
+
+[data-theme="wii-menu"] .retro-taskbar {
+  background: linear-gradient(#ffffff, #e4e9ee);
+  box-shadow: inset 0 1px 0 #ffffff, 0 -1px 2px rgba(30, 50, 70, 0.12);
+}
+
+[data-theme="switch-home"] .retro-taskbar {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  box-shadow: 0 4px 16px rgba(20, 24, 32, 0.18);
+  padding: 5px 14px;
 }

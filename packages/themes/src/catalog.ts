@@ -1,4 +1,5 @@
 import { aestheticThemes } from "./aesthetic";
+import { consoleThemes } from "./console";
 import { desktopOsThemes } from "./desktop-os";
 import { mobileThemes } from "./mobile";
 import { gamingThemes } from "./gaming";
@@ -9,6 +10,7 @@ import { webUiThemes } from "./web-ui";
 export const themes: RetroTheme[] = [
   ...desktopOsThemes,
   ...mobileThemes,
+  ...consoleThemes,
   ...terminalThemes,
   ...gamingThemes,
   ...webUiThemes,
@@ -89,6 +91,10 @@ export const EXPECTED_STYLE_IDS = [
   "windows-mobile",
   "newton-os",
   "magic-cap",
+  "ps3-xmb",
+  "xbox-blades",
+  "wii-menu",
+  "switch-home",
   "skeuomorphic-2010",
   "material-design",
   "material-you",
