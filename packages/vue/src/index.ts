@@ -4,6 +4,10 @@ export { RETRO_THEME_KEY, useRetroTheme } from "./context";
 
 export { default as RetroProvider } from "./components/RetroProvider.vue";
 export { default as Button } from "./components/Button.vue";
+export { default as Dialog } from "./components/Dialog.vue";
+export { default as Menu } from "./components/Menu.vue";
+export { default as Toggle } from "./components/Toggle.vue";
+export { default as Tooltip } from "./components/Tooltip.vue";
 export { default as TitleButton } from "./components/TitleButton.vue";
 export { default as TextInput } from "./components/TextInput.vue";
 export { default as TextArea } from "./components/TextArea.vue";

@@ -4,6 +4,11 @@ export { default as RetroProvider } from "./lib/RetroProvider.svelte";
 export { useRetroTheme } from "./context";
 
 export { default as Button } from "./lib/Button.svelte";
+
+export { default as Dialog } from "./lib/Dialog.svelte";
+export { default as Menu } from "./lib/Menu.svelte";
+export { default as Toggle } from "./lib/Toggle.svelte";
+export { default as Tooltip } from "./lib/Tooltip.svelte";
 export { default as TitleButton } from "./lib/TitleButton.svelte";
 
 export { default as TextInput } from "./lib/TextInput.svelte";

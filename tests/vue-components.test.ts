@@ -1,8 +1,18 @@
 import { mount } from "@vue/test-utils";
-import { h, nextTick } from "vue";
-import { describe, expect, it } from "vitest";
-import { Button, RetroProvider, Tabs, TextInput, Window } from "@gregnazario/retro-ui-vue";
+import { computed, h, nextTick } from "vue";
+import { describe, expect, it, vi } from "vitest";
+import {
+  Button,
+  Dialog,
+  Menu,
+  RetroProvider,
+  Tabs,
+  TextInput,
+  Toggle,
+  Window,
+} from "@gregnazario/retro-ui-vue";
 import { EXPECTED_STYLE_IDS, getTheme } from "@gregnazario/retro-ui-themes";
+import { RETRO_THEME_KEY } from "../packages/vue/src/context";
 
 function dispatchPointer(el: Element, type: string, x: number, y: number) {
   el.dispatchEvent(
@@ -81,4 +91,43 @@ describe("vue themed components", () => {
     const win = wrapper.element.querySelector(".retro-window") as HTMLElement;
     expect(win.style.transform).toBe("translate(0px, 0px)");
   });
+
+  it("emits update:checked when the switch is clicked", async () => {
+    const wrapper = mount(Toggle, {
+      props: { label: "Power", checked: false },
+    });
+    const toggle = wrapper.get('[role="switch"]');
+    expect(toggle.attributes("aria-checked")).toBe("false");
+    await toggle.trigger("click");
+    expect(wrapper.emitted("update:checked")).toEqual([[true]]);
+  });
+
+  it("opens the menu and runs the item handler", async () => {
+    const picked = vi.fn();
+    const wrapper = mount(Menu, {
+      props: { label: "Actions", items: [{ label: "Go", onClick: picked }] },
+    });
+    await wrapper.get("button.retro-button").trigger("click");
+    expect(wrapper.find('[role="menu"]').exists()).toBe(true);
+    await wrapper.get('[role="menuitem"]').trigger("click");
+    expect(picked).toHaveBeenCalledOnce();
+    expect(wrapper.find('[role="menu"]').exists()).toBe(false);
+  });
+
+  it("emits close when the dialog Escape listener fires", async () => {
+    const wrapper = mount(Dialog, {
+      props: { open: true, title: "About" },
+      global: {
+        provide: {
+          [RETRO_THEME_KEY]: computed(() => getTheme("windows-95")),
+        },
+      },
+    });
+    expect(wrapper.find('[role="dialog"]').exists()).toBe(true);
+    document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
+    await nextTick();
+    expect(wrapper.emitted("close")).toBeTruthy();
+    wrapper.unmount();
+  });
 });
+

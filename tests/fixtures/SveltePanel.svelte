@@ -1,5 +1,14 @@
 <script lang="ts">
-  import { RetroProvider, Tabs, TextInput, Button, Window } from "@gregnazario/retro-ui-svelte";
+  import {
+    RetroProvider,
+    Tabs,
+    TextInput,
+    Button,
+    Toggle,
+    Window,
+  } from "@gregnazario/retro-ui-svelte";
+
+  let power = $state(true);
 
   let { themeId, title = "Panel" }: { themeId: string; title?: string } = $props();
 </script>
@@ -16,6 +25,7 @@
         { id: "b", label: "Beta", content: beta },
       ]}
     />
+    <Toggle label="Power" checked={power} onChange={(next) => (power = next)} />
     <Button variant="primary">OK</Button>
   </Window>
 </RetroProvider>

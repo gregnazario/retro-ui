@@ -8,6 +8,11 @@ export {
   TextArea,
   TextInput,
 } from "./components/Forms";
+export { Dialog } from "./components/Dialog";
+export { Menu } from "./components/Menu";
+export type { MenuItem } from "./components/Menu";
+export { Toggle } from "./components/Toggle";
+export { Tooltip } from "./components/Tooltip";
 export {
   Alert,
   Badge,

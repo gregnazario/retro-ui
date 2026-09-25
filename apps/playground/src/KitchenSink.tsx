@@ -5,9 +5,11 @@ import {
   Button,
   Checkbox,
   Desktop,
+  Dialog,
   Fieldset,
   Label,
   ListBox,
+  Menu,
   MenuBar,
   Progress,
   Radio,
@@ -18,6 +20,8 @@ import {
   StatusBar,
   Swatch,
   Table,
+  Toggle,
+  Tooltip,
   Tabs,
   TaskBar,
   TextArea,
@@ -42,6 +46,8 @@ function Clock() {
 export function KitchenSink({ theme }: { theme: RetroTheme }) {
   const [os, setOs] = useState("System");
   const [volume, setVolume] = useState(60);
+  const [turbo, setTurbo] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const palette = useMemo(
     () => [
       theme.tokens.desktop,
@@ -161,6 +167,7 @@ export function KitchenSink({ theme }: { theme: RetroTheme }) {
                         <Checkbox label="Show hidden files" />
                         <Radio name="boot" label="Normal startup" defaultChecked />
                         <Radio name="boot" label="Safe mode" />
+                      <Toggle label="Turbo mode" checked={turbo} onChange={setTurbo} />
                       </Stack>
                     </Fieldset>
                   </Stack>
@@ -220,6 +227,17 @@ export function KitchenSink({ theme }: { theme: RetroTheme }) {
             <Button>Cancel</Button>
             <Button>Apply</Button>
             <Button disabled>Disabled</Button>
+            <Menu
+              label="Actions"
+              items={[
+                { label: "About…", onClick: () => setAboutOpen(true) },
+                { label: "Refresh" },
+                { label: "Export…", disabled: true },
+              ]}
+            />
+            <Tooltip text="Opens the about dialog">
+              <Button onClick={() => setAboutOpen(true)}>About…</Button>
+            </Tooltip>
             <Badge>{theme.year}</Badge>
           </Row>
         </Stack>
@@ -235,6 +253,18 @@ export function KitchenSink({ theme }: { theme: RetroTheme }) {
           <Button variant="primary">OK</Button>
         </Row>
       </Window>
+      <Dialog
+        open={aboutOpen}
+        title={`About ${theme.name}`}
+        onClose={() => setAboutOpen(false)}
+      >
+        <p style={{ margin: "0 0 12px" }}>{theme.description}</p>
+        <Row>
+          <Button variant="primary" onClick={() => setAboutOpen(false)}>
+            OK
+          </Button>
+        </Row>
+      </Dialog>
     </Desktop>
   );
 }

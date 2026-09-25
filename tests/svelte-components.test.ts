@@ -1,7 +1,8 @@
 import { render } from "@testing-library/svelte";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { EXPECTED_STYLE_IDS, getTheme } from "@gregnazario/retro-ui-themes";
 import SveltePanel from "./fixtures/SveltePanel.svelte";
+import { Dialog, Menu, Toggle } from "@gregnazario/retro-ui-svelte";
 
 function dispatchPointer(el: Element, type: string, x: number, y: number) {
   el.dispatchEvent(
@@ -45,4 +46,42 @@ describe("svelte themed components", () => {
     const win = container.querySelector(".retro-window") as HTMLElement;
     expect(win.style.transform).toBe("translate(40px, 30px)");
   });
+
+  it("fires the switch onChange with the next value", async () => {
+    const changed = vi.fn();
+    const { container } = render(Toggle, {
+      props: { label: "Power", checked: false, onChange: changed },
+    });
+    const toggle = container.querySelector('[role="switch"]') as HTMLElement;
+    expect(toggle.getAttribute("aria-checked")).toBe("false");
+    toggle.click();
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    expect(changed).toHaveBeenCalledWith(true);
+  });
+
+  it("opens the menu and runs the item handler", async () => {
+    const picked = vi.fn();
+    const { container } = render(Menu, {
+      props: { label: "Actions", items: [{ label: "Go", onClick: picked }] },
+    });
+    (container.querySelector(".retro-menu button") as HTMLElement).click();
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    expect(container.querySelector('[role="menu"]')).toBeTruthy();
+    (container.querySelector('[role="menuitem"]') as HTMLElement).click();
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    expect(picked).toHaveBeenCalledOnce();
+    expect(container.querySelector('[role="menu"]')).toBeNull();
+  });
+
+  it("calls dialog onClose on Escape", async () => {
+    const onClose = vi.fn();
+    render(Dialog, {
+      props: { open: true, title: "About", onClose },
+    });
+    expect(document.querySelector('[role="dialog"]')).toBeTruthy();
+    document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    expect(onClose).toHaveBeenCalledOnce();
+  });
 });
+

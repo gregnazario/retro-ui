@@ -137,7 +137,7 @@ Desktop OS, terminals, games, web eras, and graphic systems are all first-class.
 
 ## Components
 
-`Button`, `TextInput`, `TextArea`, `Select`, `Checkbox`, `Radio`, `Slider`, `Progress`, `Window`, `Desktop`, `TaskBar`, `MenuBar`, `Tabs`, `Fieldset`, `Table`, `ListBox`, `StatusBar`, `Alert`, `Badge`, `Separator`.
+`Button`, `TextInput`, `TextArea`, `Select`, `Checkbox`, `Radio`, `Toggle`, `Slider`, `Progress`, `Window`, `Desktop`, `TaskBar`, `MenuBar`, `Menu`, `Tabs`, `Fieldset`, `Table`, `ListBox`, `StatusBar`, `Alert`, `Badge`, `Separator`, `Dialog`, `Tooltip`.
 
 The `TaskBar` sits at the bottom by default; macOS and GNOME styles position it
 as a top menu bar automatically (override per use with `position="top"`).
